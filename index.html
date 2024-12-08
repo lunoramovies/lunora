@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <style>
+        #content {
+            margin-top: 20px;
+        }
+        #back-button {
+            display: none;
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: purple;
+            text-decoration: underline;
+        }
+        select, iframe {
+            margin-bottom: 20px;
+        }
+        #title h1 {
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    input {
+            border: none; 
+            background: 90deg;
+            background-color: #1a1a1a; 
+            background-origin: border-box;
+            color: ivory;
+            padding: 6px 12px;
+            font-size: 16px;
+            border-radius: 8px;
+    }
+
+    #Movies button {
+  border: none; 
+  background-color: #1a1a1a; 
+  background-origin: border-box;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+    }
+
+    #AnotherSection h3 {
+        color: ivory;
+    }
+
+    #Movies a {
+        color: ivory;
+    }
+
+    .movie-list p {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            font-weight: bold;
+        }
+    .movie-list a {
+            color: black;
+        }
+    .movie-item {
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    .movie-item img {
+            width: 100%;
+            height: auto;
+        }
+
+    .background-button { 
+            border: 2px solid #1a1a1a; /* Outline color and thickness */
+            background-color: transparent; /* Transparent background */
+            color: #1a1a1a; /* Text color to match outline */
+            padding: 6px 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.background-button:hover {
+    background-color: ivory; /* Fill background on hover */
+    color: #1a1a1a; /* Change text color on hover */
+}
+
+        #content {
+            margin-top: 20px;
+        }
+        
+        #back-button {
+            display: none;
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+
+    h1 {
+        text-decoration: underline;
+        color: ivory;
+    }
+
+    h2 {
+        color: ivory;
+    }
+
+    h3 {
+        color: ivory;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: ivory;
+    }
+
+    body {
+        background-color: black;
+        font-size: 16px; /* On desktop */
+        font-family: "Bungee", sans-serif;
+    }
+
+    @media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Smaller font on mobile */
+     }
+    }
+
+    #title h1 {
+     color: rgb(63,72,204);
+    }
+
+    button {
+        border-color: #1a1a1a;
+        border-radius: 3%;
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .container {
+        width: 100%; /* Let the container take the full width */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    @media (max-width: 600px) {
+    .movie {
+        flex: 1 1 100%;
+     }
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px; /* Prevents images from getting too large */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    @media (max-width: 600px) {
+    button {
+        padding: 15px 25px;
+        font-size: 1.2em;
+     }
+    }
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    33% {
+        transform: translate(-5px, 5px);
+    }
+    66% {
+        transform: translate(5px, -5px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 10px; /* Adds space between image and text */
+}
+
+.flex-image {
+    width: 150px; /* Adjust size as needed */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers the flex-container horizontally */
+    width: 100%; /* Optional: ensures it takes full width of the parent */
+}
+
+.container {
+            max-width: 90vw;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .movie-item:hover {
+            transform: scale(1.15); 
+        }
+
+        .movie-item img {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Limit image height to prevent overflow */
+            margin-bottom: 10px; /* Space between image and text */
+        }
+
+        .movie-item p {
+            margin: 0; /* Remove default margins */
+            white-space: normal;
+            overflow: hidden;
+            max-height: 500em;
+        }
+
+        .movie-item button {
+            display: block; /* Make button block level */
+            margin: 5px auto; /* Center button and add margin */
+            max-height: 300em;
+        }
+
+        .episode-container {
+            display: flex;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .sidebar {
+            flex: 0 0 200px;
+            max-width: 20%;
+            background: #2b2b2b;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .episode {
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .episode:hover, .episode.active {
+            background: #444;
+        }
+
+        .player {
+            flex: 1;
+            background: #000;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 65vh;
+            max-height: 600px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+#search-results {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to prevent vertical scrolling */
+}
+
+.movie-list {
+    display: flex;
+    gap: 20px; /* Spacing between items */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+}
+
+.movie-item {
+    min-width: 150px; /* Fixed width for consistent scrolling */
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <div class="center-container">
+    <div class="flex-container">
+        <center><a href="https://discord.gg/zsXsfe6aCX"><img src="https://i.ibb.co/f15zJkV/Umovies.png" alt="Udiscord" class="flex-image"></a></center>
+        <center><a href="https://discord.gg/zsXsfe6aCX"><h1>Lunora</h1></a></center>
+    </div>
+    </div>
+
+         <center><h2>Movie/TV Show Search</h2></center>
+    <center>
+        <input type="text" id="searchInput" placeholder="Enter movie/show name">
+    </center>
+    <br>
+    
+    <div id="specific-section">
+        <div id="content">
+            <h2>Welcome to Lunora!</h2>
+            <p>Please select a <span style="color: crimson;">movie</span> or <span style="color: #069af3;">TV show!</span></p>
+        </div>
+    <div id="back-button" onclick="showMovieList()">← Back to Movie/Show List</div>
+    </div>
+    <div id="Movies">
+ <center>
+<h1>Movies</h1>
+<br>
+<div id="search-results">
+    <div class="movie-list" id="Movies">
+        <div class="movie-item" data-movie="TrumanShow">
+            <img src="https://i.ibb.co/7RcR2MM/e5-EMJEQn-Wk-Wb8-G6s-TMk-N91qiq-Uz-831065533.jpg" alt="Truman Show">
+            <p>Truman Show</p>
+            <button><a href="https://1fichier.com/?3c83ur2nrqtf92iebmjg">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="FightClub">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.goldposter.com%2F2015%2F04%2FFight-Club_poster_goldposter_com_93.jpg&f=1&nofb=1&ipt=214c757da6a0a3cffb000a4235f72a9f9065724e04e9f539b3c76c1318bd958f&ipo=images" alt="Fight Club">
+            <p>Fight Club</p>
+            <button><a href="https://1fichier.com/?nf1se0lno055jchjnigd" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Whiplash">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F2kzGULIUvuhGGyTNLpjRu742hps.jpg&f=1&nofb=1&ipt=140f2a7f9cbb0e520fdaed278d6c6e2f5f4dbcfbb482d5f905d7de4237e73b0b&ipo=images" alt="Whiplash">
+            <p>Whiplash</p>
+            <button><a href="https://1fichier.com/?7enkt9p3yxlxx2m13joc" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Deadpool">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2Fd2V5MyJxPM1GX7XcCNrTFHhYe3T.jpg&f=1&nofb=1&ipt=b74318a38ddbf8f84bb6cf3e089fdc9f15686a2ba66742d8c8d9d71af600d21a&ipo=images" alt="Deadpool">
+            <p>Deadpool</p>
+            <button><a href="https://1fichier.com/?04l12voxiy57crl9fkgx" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Deadpool2">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FlPGED5P9XIm2t4BpkazccO0PcOU.jpg&f=1&nofb=1&ipt=c87afeeeee51cf7b5b7f21a717071733e260983aef8688a0a48988ba18223ecb&ipo=images" alt="Deadpool 2">
+            <p>Deadpool II</p>
+            <button><a href="https://1fichier.com/?m36fmb01mktuqq3pc3vb" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Deadpool3">
+            <img src="https://cdn.marvel.com/content/1x/dp3_1sht_digital_srgb_ka_swords_v5_resized.jpg" alt="Deadpool and Wolverine">
+            <p>Deadpool and Wolverine</p>
+            <button><a href="https://1fichier.com/?r5xujuwabcjy6kwguno6" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Borat">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm82kgee2u-oV9hhUfL1mpWo0fyBizAC73lw&s" alt="Borat">
+            <p>Borat</p>
+            <button><a href="https://1fichier.com/?s4az7dwbjjrwjt2lth0a" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Borat2">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwessels-filmkritik.com%2Fwp-content%2Fuploads%2F2020%2F10%2FA1cIYSWe2xL._RI_.jpg%3Fssl%3D1&f=1&nofb=1&ipt=8a9a2888eb6db076b3902d2871e3fcc8afb0b963ebb5cd017edd80a08df15fcc&ipo=images" alt="Borat">
+            <p>Borat(sequel)</p>
+            <button><a href="https://1fichier.com/?xzm2bmivekgm6zuzhvm4" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Taken">
+            <img src="https://artofthemovies.co.uk/cdn/shop/products/taken_0721671d-410507_1024x1024@2x.jpg?v=1632413846" alt="Taken">
+            <p>Taken</p>
+            <button><a href="https://1fichier.com/?9abdf0ohnsnxgajsjg11" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Taken2">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTkwNTQ0ODExOV5BMl5BanBnXkFtZTcwNjU3NDQwOA@@._V1_.jpg" alt="Taken 2">
+            <p>Taken II</p>
+            <button><a href="https://1fichier.com/?4cjnf8jmeyrn354uw1n3" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Taken3">
+            <img src="https://m.media-amazon.com/images/M/MV5BNjM5MDU3NTY0M15BMl5BanBnXkFtZTgwOTk2ODU2MzE@._V1_FMjpg_UX1000_.jpg" alt="Taken 3">
+            <p>Taken III</p>
+            <button><a href="https://1fichier.com/?c1ingmgto10vtd6us3qw" target="_blank">Download</a></button>
+        </div>
+        <div class="movie-item" data-movie="Transformers">
+            <img src="https://m.media-amazon.com/images/I/51m2UmuaxuL._AC_UF894,1000_QL80_.jpg" alt="Transformers">
+            <p>Transformers(2007)</p>
+            <button><a href="https://1fichier.com/?dyrgsdez95mpb2udn5cb" target="_blank">Download</a></button>
+    </div>
+         <div class="movie-item" data-movie="TDK">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FeP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg&f=1&nofb=1&ipt=2c285556d5a5adbfd4637d61ec0e3798a3a7caae52cbc69acb6fee66bb0ed482&ipo=images" alt="The Dark Knight">
+          <p>The Dark Knight</p>
+        <button><a href="https://1fichier.com/?7fqxcf7y9seaznwzo79k">Download</a></button>
+</div>
+         <div class="movie-item" data-movie="TDKR">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FlEeOaKZf16R1cZCuryP859SKgE7.jpg&f=1&nofb=1&ipt=6be8a5c298cb93e867e6159ab0facc31b51fec606197d18d33b5fef58c3adf9f&ipo=images" alt="The Dark Knight Rises">
+          <p>The Dark Knight Rises</p>
+         <button><a href="https://1fichier.com/?xeozwhqk2a041kvpfwof">Download</a></button>
+</div>
+         <div class="movie-item" data-movie="TheLorax">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FtePFnZFw5JvjwjQjaKkqDPNMLPU.jpg&f=1&nofb=1&ipt=197e430be69fed3ce4f377e79beb1e6705a8e8cec2dd17b353a463b3ed68acdf&ipo=images" alt="The Lorax">
+          <p>The Lorax</p>
+        <button><a href="https://1fichier.com/?fkekfx215ylq9vja1d9f">Download</a></button>
+</div>
+
+</div>
+<div id="no-results" style="display: none;">
+    <p>No Movie found :( Please check TV shows or try a different search.</p>
+</div>
+<br>
+
+</div>
+
+</div>
+
+    <br>
+ </center>
+
+<div id="TVshows">
+
+ <center>
+<h1>TV shows</h1>
+    <div class="movie-list" id="TVshows">
+         <div class="movie-item" data-movie="Peacemaker">
+        <img src="https://m.media-amazon.com/images/M/MV5BODk2NjAyOWMtM2FjZC00MjZhLTkxMjQtZTM3NjJlYTE5MDdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="Peacemaker">
+        <p>Peacemaker</p>
+         </div>
+
+            <div class="movie-item" data-movie="DaBois">
+           <img src="https://m.media-amazon.com/images/I/81u7-vDBYrL.jpg" alt="The Boys">
+           <p>The Boys</p>
+            </div>
+            
+                <div class="movie-item" data-movie="GenV">
+               <img src="https://image.tmdb.org/t/p/original/uuot1N5AgZ7xRCKgm4ZCwOhgIJu.jpg" alt="Gen V">
+               <p>Gen V</p>
+                </div>
+
+                    <div class="movie-item" data-movie="Sharpe">
+                   <img src="https://image.tmdb.org/t/p/original/adoq3P4qCeDquGXjtcwDDXECESH.jpg" alt="Sharpe">
+                   <p>Sharpe</p>
+                    </div>
+
+                        <div class="movie-item" data-movie="HazbinHotel">
+                       <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffr.web.img4.acsta.net%2Fpictures%2F23%2F12%2F13%2F11%2F47%2F1607117.jpg&f=1&nofb=1&ipt=ec7d60390cf7cc601a8cc8cded5088e818d7db6193b62dca9609c5608f518506&ipo=images" alt="Hazbin Hotel">
+                       <p>Hazbin Hotel</p>
+                        </div>
+
+                            <div class="movie-item" data-movie="TGT">
+                           <img src="https://lh6.googleusercontent.com/proxy/MJ0iUY49rsVEzcXAZXXI7ciuSesIdeBxrM_b3E3DIGMxMWzhzxH-Di0lhFaW3K4KlIzuJS1uVjFSm-3wYqU_t9qUn1A8" alt="The Grand Tour">
+                           <p>The Grand Tour</p>
+                            </div>
+
+                            <div class="movie-item" data-movie="TheFlash">
+                                <img src="https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="The Flash">
+                                <p>The Flash</p>
+                            </div>
+
+                             <div class="movie-item" data-movie="BreakingBad">
+                                 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpicfiles.alphacoders.com%2F422%2Fthumb-1920-422251.jpg&f=1&nofb=1&ipt=3c5af08006909e76ad6c26c95646984fba26a0f42daaeaee3edb5276e8fb5512&ipo=images" alt="Breaking Bad">
+                                 <p>Breaking Bad</p>
+                             </div>
+
+                              <div class="movie-item" data-movie="BCS">
+                                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFjqeJbWN4E9UH9jhY3f3-qQx3VF4DdCwlAQ&s" alt="Better Call Saul">
+                                  <p>Better Call Saul</p>
+                              </div>
+
+                               <div class="movie-item" data-movie="Invincible">
+                                <img src="https://m.media-amazon.com/images/I/719nUEGliCL._AC_UF894,1000_QL80_.jpg" alt="Invincible">
+                                <p>Invincible</p>
+                               </div>
+
+
+    </div>
+
+</div>
+
+<center>
+        <div class="episode-container">
+            <button id="backToMenu">Back to Movies</button>
+            <iframe id="episodeFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+</center>
+
+</center>
+    <div id="AnotherSection">
+        <center><h3>We take requests! To request join the Lunora server!</h3></center>
+    <center><a href="https://discord.gg/zsXsfe6aCX"><button class="background-button">Join the server!</button></a></center> 
+         </div>
+         
+    <script>
+const movies = {
+'TrumanShow': {
+        title: 'Truman Show',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59iui1/?pub=3u4il9',
+        }
+    },
+'FightClub': {
+        title: 'Fight Club',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59iuxp/?pub=3u4il9',
+        }
+    },
+'Whiplash': {
+        title: 'Whiplash',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59ixmq/?pub=3u4il9',
+        }
+    },
+'Deadpool': {
+        title: 'Deadpool',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59nkat/?pub=3u4il9',
+        }
+    },
+'Deadpool2': {
+        title: 'Deadpool 2',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59nlb1/?pub=3u4il9',
+        }
+    },
+'Deadpool3': {
+        title: 'Deadpool and Wolverine',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59nlb1/?pub=3u4il9',
+        }
+    },
+'Borat': {
+        title: 'Borat',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v59rvud/?pub=3u4il9',
+        }
+    },
+'Borat2': {
+        title: 'Borat(sequel)',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5f3fxh/?pub=3u4il9',
+        }
+    },
+'Taken': {
+        title: 'Taken',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5b2fc4/?pub=3u4il9',
+        }
+    },
+'Taken2': {
+        title: 'Taken 2',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5b2ixp/?pub=3u4il9',
+        }
+    },
+'Taken3': {
+        title: 'Taken 3',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5b2os4/?pub=3u4il9',
+        }
+    },
+'Transformers': {
+        title: 'Transformers(2007)',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5dd0fg/?pub=3u4il9',
+        }
+    },
+'TDK': {
+        title: 'The Dark Knight',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5eof6l/?pub=3u4il9',
+        }
+    },
+'TDKR': {
+        title: 'The Dark Knight Rises',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5f3mtw/?pub=3u4il9',
+        }
+    },
+'TheLorax': {
+        title: 'The Lorax',
+        type: 'movie', // Specify it's a movie
+        episodes: {
+            'Main Movie': 'https://rumble.com/embed/v5erdoy/?pub=3u4il9',
+        }
+    },
+'Peacemaker': {
+        title: 'Peacemaker',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v59inb1/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v59inrp/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v59irt0/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v59lcdx/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v59lcus/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v59lcok/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v59lcpu/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v59lcrh/?pub=3u4il9',
+        }
+    },
+'DaBois': {
+        title: 'The Boys',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v59imne/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v59ind9/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v59gvt9/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v59lb45/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v59lb7x/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v59lb97/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v59lbaz/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v59lbc9/?pub=3u4il9',
+            '': '',
+            'Season 2 Episode 1': 'https://rumble.com/embed/v59ragc/?pub=3u4il9',
+            'Season 2 Episode 2': 'https://rumble.com/embed/v59raqb/?pub=3u4il9',
+            'Season 2 Episode 3': 'https://rumble.com/embed/v59raut/?pub=3u4il9',
+            'Season 2 Episode 4': 'https://rumble.com/embed/v59rawk/?pub=3u4il9',
+            'Season 2 Episode 5': 'https://rumble.com/embed/v59razl/?pub=3u4il9',
+            'Season 2 Episode 6': 'https://rumble.com/embed/v59rb1g/?pub=3u4il9',
+            'Season 2 Episode 7': 'https://rumble.com/embed/v59rb3g/?pub=3u4il9',
+            'Season 2 Episode 8': 'https://rumble.com/embed/v59rb58/?pub=3u4il9',
+            '‎ ': '',
+            'Season 3 Episode 1': 'https://rumble.com/embed/v59rdut/?pub=3u4il9',
+            'Season 3 Episode 2': 'https://rumble.com/embed/v59rdwi/?pub=3u4il9',
+            'Season 3 Episode 3': 'https://rumble.com/embed/v59rdxx/?pub=3u4il9',
+            'Season 3 Episode 4': 'https://rumble.com/embed/v59rdzp/?pub=3u4il9',
+            'Season 3 Episode 5': 'https://rumble.com/embed/v59re1t/?pub=3u4il9',
+            'Season 3 Episode 6': 'https://rumble.com/embed/v59re4h/?pub=3u4il9',
+            'Season 3 Episode 7': 'https://rumble.com/embed/v59re6t/?pub=3u4il9',
+            'Season 3 Episode 8': 'https://rumble.com/embed/v59re9h/?pub=3u4il9',
+            '‎ ‎ ': '',
+            'Season 4 Episode 1': 'https://rumble.com/embed/v59rg4d/?pub=3u4il9',
+            'Season 4 Episode 2': 'https://rumble.com/embed/v59rgc5/?pub=3u4il9',
+            'Season 4 Episode 3': 'https://rumble.com/embed/v59rg64/?pub=3u4il9',
+            'Season 4 Episode 4': 'https://rumble.com/embed/v59rgdw/?pub=3u4il9',
+            'Season 4 Episode 5': 'https://rumble.com/embed/v59rgfn/?pub=3u4il9',
+            'Season 4 Episode 6': 'https://rumble.com/embed/v59rgh0/?pub=3u4il9',
+            'Season 4 Episode 7': 'https://rumble.com/embed/v59rgit/?pub=3u4il9',
+            'Season 4 Episode 8': 'https://rumble.com/embed/v59rgks/?pub=3u4il9',
+        }
+    },
+'GenV': {
+        title: 'Gen V',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v59nb0a/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v59o0a1/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v59o0f1/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v59o0gt/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v59o0j1/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v59o0kq/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v59o0n7/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v59o0qb/?pub=3u4il9',
+        }
+    },
+'Sharpe': {
+        title: 'Sharpe',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v59hc1e/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v59hcyk/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v59hdmt/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v59hgnp/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v59hnfh/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v59ho4d/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v59l7p5/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v59l7zf/?pub=3u4il9',
+            'Season 1 Episode 9': 'https://rumble.com/embed/v59l8v9/?pub=3u4il9',
+            'Season 1 Episode 10': 'https://rumble.com/embed/v59l8x9/?pub=3u4il9',
+            'Season 1 Episode 11': 'https://rumble.com/embed/v59l93x/?pub=3u4il9',
+            'Season 1 Episode 12': 'https://rumble.com/embed/v59l96x/?pub=3u4il9',
+            'Season 1 Episode 13': 'https://rumble.com/embed/v59l9k9/?pub=3u4il9',
+            'Season 1 Episode 14': 'https://rumble.com/embed/v59l9no/?pub=3u4il9',
+            'Season 1 Episode 15': 'https://rumble.com/embed/v59l9rv/?pub=3u4il9',
+            'Season 1 Episode 16': 'https://rumble.com/embed/v59l9tx/?pub=3u4il9',
+            'Season 1 Episode 17': 'https://rumble.com/embed/v59la4l/?pub=3u4il9',
+            'Season 1 Episode 18': 'https://rumble.com/embed/v59hb3h/?pub=3u4il9',
+        }
+    },
+'HazbinHotel': {
+        title: 'Hazbin Hotel',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5cldul/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5cldid/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5cld5h/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5clc9p/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5clbo5/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5cl95x/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5cl9k5/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v5clb3g/?pub=3u4il9',
+        }
+    },
+'TGT': {
+        title: 'The Grand Tour',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5d47t9/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5d48r8/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5d49dp/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5d4a0c/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5d4akp/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5d4bbx/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5d4fix/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v5d4hbp/?pub=3u4il9',
+            'Season 1 Episode 9': 'https://rumble.com/embed/v5d4hh1/?pub=3u4il9',
+            'Season 1 Episode 10': 'https://rumble.com/embed/v5d4hrp/?pub=3u4il9',
+            'Season 1 Episode 11': 'https://rumble.com/embed/v5d4hxu/?pub=3u4il9',
+            'Season 1 Episode 12': 'https://rumble.com/embed/v5d4i1l/?pub=3u4il9',
+            'Season 1 Episode 13': 'https://rumble.com/embed/v5d4i6t/?pub=3u4il9',
+            '': '',
+            'Season 2 Episode 1': 'https://rumble.com/embed/v5fa84t/?pub=3u4il9',
+            'Season 2 Episode 2': 'https://rumble.com/embed/v5fa86j/?pub=3u4il9',
+            'Season 2 Episode 3': 'https://rumble.com/embed/v5fa87g/?pub=3u4il9',
+            'Season 2 Episode 4': 'https://rumble.com/embed/v5fa88k/?pub=3u4il9',
+            'Season 2 Episode 5': 'https://rumble.com/embed/v5fa89p/?pub=3u4il9',
+            'Season 2 Episode 6': 'https://rumble.com/embed/v5fa8at/?pub=3u4il9',
+            'Season 2 Episode 7': 'https://rumble.com/embed/v5fagoq/?pub=3u4il9',
+            'Season 2 Episode 8': 'https://rumble.com/embed/v5fagt1/?pub=3u4il9',
+            'Season 2 Episode 9': 'https://rumble.com/embed/v5fagud/?pub=3u4il9',
+            'Season 2 Episode 10': 'https://rumble.com/embed/v5fagw9/?pub=3u4il9',
+            'Season 2 Episode 11': 'https://rumble.com/embed/v5fagxn/?pub=3u4il9',
+            '‎ ': '',
+            'Season 3 Episode 1': 'https://rumble.com/embed/v5fan0t/?pub=3u4il9',
+            'Season 3 Episode 2': 'https://rumble.com/embed/v5fanvd/?pub=3u4il9',
+            'Season 3 Episode 3': 'https://rumble.com/embed/v5fapcx/?pub=3u4il9',
+            'Season 3 Episode 4': 'https://rumble.com/embed/v5fat55/?pub=3u4il9',
+            'Season 3 Episode 5': 'https://rumble.com/embed/v5fat6r/?pub=3u4il9',
+            'Season 3 Episode 6': 'https://rumble.com/embed/v5fat9g/?pub=3u4il9',
+            'Season 3 Episode 7': 'https://rumble.com/embed/v5fatah/?pub=3u4il9',
+            'Season 3 Episode 8': 'https://rumble.com/embed/v5fatgc/?pub=3u4il9',
+            'Season 3 Episode 9': 'https://rumble.com/embed/v5fathe/?pub=3u4il9',
+            'Season 3 Episode 10': 'https://rumble.com/embed/v5favl9/?pub=3u4il9',
+            'Season 3 Episode 11': 'https://rumble.com/embed/v5faw3p/?pub=3u4il9',
+            'Season 3 Episode 12': 'https://rumble.com/embed/v5faw3x/?pub=3u4il9',
+            'Season 3 Episode 13': 'https://rumble.com/embed/v5fawc3/?pub=3u4il9',
+            'Season 3 Episode 14': 'https://rumble.com/embed/v5fawcq/?pub=3u4il9',
+            '‎ ‎‎ ': '',
+            'Season 4 Episode 1': 'https://rumble.com/embed/v5fbgdp/?pub=3u4il9',
+            'Season 4 Episode 2': 'https://rumble.com/embed/v5fbgf1/?pub=3u4il9',
+            'Season 4 Episode 3': 'https://rumble.com/embed/v5fbggc/?pub=3u4il9',
+            'Season 4 Episode 4': 'https://rumble.com/embed/v5fbght/?pub=3u4il9',
+            '‎ ‎ ': '',
+            'Season 5 Episode 1': 'https://rumble.com/embed/v5fbjat/?pub=3u4il9',
+            'Season 5 Episode 2': 'https://rumble.com/embed/v5fbjct/?pub=3u4il9',
+            'Season 5 Episode 3': 'https://rumble.com/embed/v5fbjvp/?pub=3u4il9',
+            '‎ ‎‎ ‎': '',
+            'Season 6 Episode 1': 'https://rumble.com/embed/v5fbnh9/?pub=3u4il9',
+        }
+    },
+'TheFlash': {
+        title: 'The Flash',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5ddjo5/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5ddjtp/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5ddk64/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5ddkid/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5ddkn9/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5ddq9h/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5ddql1/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v5ddqqs/?pub=3u4il9',
+            'Season 1 Episode 9': 'https://rumble.com/embed/v5ddqv7/?pub=3u4il9',
+            'Season 1 Episode 10': 'https://rumble.com/embed/v5ddr7p/?pub=3u4il9',
+            'Season 1 Episode 11': 'https://rumble.com/embed/v5ddra1/?pub=3u4il9',
+            'Season 1 Episode 12': 'https://rumble.com/embed/v5ddrde/?pub=3u4il9',
+            'Season 1 Episode 13': 'https://rumble.com/embed/v5ddrm5/?pub=3u4il9',
+            'Season 1 Episode 14': 'https://rumble.com/embed/v5ddrp1/?pub=3u4il9',
+            'Season 1 Episode 15': 'https://rumble.com/embed/v5ddrrp/?pub=3u4il9',
+            'Season 1 Episode 16': 'https://rumble.com/embed/v5ddsth/?pub=3u4il9',
+            'Season 1 Episode 17': 'https://rumble.com/embed/v5ddu22/?pub=3u4il9',
+            'Season 1 Episode 18': 'https://rumble.com/embed/v5ddwzp/?pub=3u4il9',
+            'Season 1 Episode 19': 'https://rumble.com/embed/v5ddz8d/?pub=3u4il9',
+            'Season 1 Episode 20': 'https://rumble.com/embed/v5ddzat/?pub=3u4il9',
+            'Season 1 Episode 21': 'https://rumble.com/embed/v5ddzd6/?pub=3u4il9',
+            'Season 1 Episode 22': 'https://rumble.com/embed/v5ddzeb/?pub=3u4il9',
+            'Season 1 Episode 23': 'https://rumble.com/embed/v5ddzgt/?pub=3u4il9',
+        }
+    },
+'BreakingBad': {
+        title: 'Breaking Bad',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5f7nai/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5f7nhg/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5f7nkl/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5f7nod/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5f7nsh/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5f7nub/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5f7nx7/?pub=3u4il9',
+            '': '',
+            'Season 2 Episode 1': 'https://rumble.com/embed/v5f7ox9/?pub=3u4il9',
+            'Season 2 Episode 2': 'https://rumble.com/embed/v5f7oz1/?pub=3u4il9',
+            'Season 2 Episode 3': 'https://rumble.com/embed/v5f7p09/?pub=3u4il9',
+            'Season 2 Episode 4': 'https://rumble.com/embed/v5f7p39/?pub=3u4il9',
+            'Season 2 Episode 5': 'https://rumble.com/embed/v5f7p4t/?pub=3u4il9',
+            'Season 2 Episode 6': 'https://rumble.com/embed/v5f7p6j/?pub=3u4il9',
+            'Season 2 Episode 7': 'https://rumble.com/embed/v5f7p91/?pub=3u4il9',
+            'Season 2 Episode 8': 'https://rumble.com/embed/v5f7q59/?pub=3u4il9',
+            'Season 2 Episode 9': 'https://rumble.com/embed/v5f7q6q/?pub=3u4il9',
+            'Season 2 Episode 10': 'https://rumble.com/embed/v5f7q7p/?pub=3u4il9',
+            'Season 2 Episode 11': 'https://rumble.com/embed/v5f7q8d/?pub=3u4il9',
+            'Season 2 Episode 12': 'https://rumble.com/embed/v5f7qar/?pub=3u4il9',
+            'Season 2 Episode 13': 'https://rumble.com/embed/v5f7qd9/?pub=3u4il9',
+            '‎ ‎': '',
+            'Season 3 Episode 1': 'https://rumble.com/embed/v5f7r7f/?pub=3u4il9',
+            'Season 3 Episode 2': 'https://rumble.com/embed/v5f7rb9/?pub=3u4il9',
+            'Season 3 Episode 3': 'https://rumble.com/embed/v5f7rdp/?pub=3u4il9',
+            'Season 3 Episode 4': 'https://rumble.com/embed/v5f7rel/?pub=3u4il9',
+            'Season 3 Episode 5': 'https://rumble.com/embed/v5f7rhx/?pub=3u4il9',
+            'Season 3 Episode 6': 'https://rumble.com/embed/v5f7rk5/?pub=3u4il9',
+            'Season 3 Episode 7': 'https://rumble.com/embed/v5f7s6x/?pub=3u4il9',
+            'Season 3 Episode 8': 'https://rumble.com/embed/v5f7s8y/?pub=3u4il9',
+            'Season 3 Episode 9': 'https://rumble.com/embed/v5f7sbn/?pub=3u4il9',
+            'Season 3 Episode 10': 'https://rumble.com/embed/v5f7sdx/?pub=3u4il9',
+            'Season 3 Episode 11': 'https://rumble.com/embed/v5f7sf1/?pub=3u4il9',
+            'Season 3 Episode 12': 'https://rumble.com/embed/v5f7shp/?pub=3u4il9',
+            'Season 3 Episode 13': 'https://rumble.com/embed/v5f7su4/?pub=3u4il9',
+            '‎ ‎‎ ‎': '',
+            'Season 4 Episode 1': 'https://rumble.com/embed/v5f7tmd/?pub=3u4il9',
+            'Season 4 Episode 2': 'https://rumble.com/embed/v5f7toc/?pub=3u4il9',
+            'Season 4 Episode 3': 'https://rumble.com/embed/v5f7tpx/?pub=3u4il9',
+            'Season 4 Episode 4': 'https://rumble.com/embed/v5f7tr9/?pub=3u4il9',
+            'Season 4 Episode 5': 'https://rumble.com/embed/v5f7tsr/?pub=3u4il9',
+            'Season 4 Episode 6': 'https://rumble.com/embed/v5f7tu5/?pub=3u4il9',
+            'Season 4 Episode 7': 'https://rumble.com/embed/v5f7ue1/?pub=3u4il9',
+            'Season 4 Episode 8': 'https://rumble.com/embed/v5f7uit/?pub=3u4il9',
+            'Season 4 Episode 9': 'https://rumble.com/embed/v5f7un9/?pub=3u4il9',
+            'Season 4 Episode 10': 'https://rumble.com/embed/v5f7upp/?pub=3u4il9',
+            'Season 4 Episode 11': 'https://rumble.com/embed/v5f7uqt/?pub=3u4il9',
+            'Season 4 Episode 12': 'https://rumble.com/embed/v5f7utp/?pub=3u4il9',
+            'Season 4 Episode 13': 'https://rumble.com/embed/v5f7v4s/?pub=3u4il9',
+            '‎ ‎‎ ‎‎ ‎': '',
+            'Season 5 Episode 1': 'https://rumble.com/embed/v5f7vnh/?pub=3u4il9',
+            'Season 5 Episode 2': 'https://rumble.com/embed/v5f7w2z/?pub=3u4il9',
+            'Season 5 Episode 3': 'https://rumble.com/embed/v5f7wdv/?pub=3u4il9',
+            'Season 5 Episode 4': 'https://rumble.com/embed/v5f7wf9/?pub=3u4il9',
+            'Season 5 Episode 5': 'https://rumble.com/embed/v5f7whp/?pub=3u4il9',
+            'Season 5 Episode 6': 'https://rumble.com/embed/v5f7wki/?pub=3u4il9',
+            'Season 5 Episode 7': 'https://rumble.com/embed/v5f7wm5/?pub=3u4il9',
+            'Season 5 Episode 8': 'https://rumble.com/embed/v5f7x9x/?pub=3u4il9',
+            'Season 5 Episode 9': 'https://rumble.com/embed/v5f7xmd/?pub=3u4il9',
+            'Season 5 Episode 10': 'https://rumble.com/embed/v5f7xnx/?pub=3u4il9',
+            'Season 5 Episode 11': 'https://rumble.com/embed/v5f7xt8/?pub=3u4il9',
+            'Season 5 Episode 12': 'https://rumble.com/embed/v5f7xut/?pub=3u4il9',
+            'Season 5 Episode 13': 'https://rumble.com/embed/v5f7xx1/?pub=3u4il9',
+            'Season 5 Episode 14': 'https://rumble.com/embed/v5f7yfo/?pub=3u4il9',
+            'Season 5 Episode 15': 'https://rumble.com/embed/v5f7yhw/?pub=3u4il9',
+            'Season 5 Episode 16': 'https://rumble.com/embed/v5f7yjx/?pub=3u4il9',
+        }
+    },
+'BCS': {
+        title: 'Better Call Saul',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5f79q2/?pub=3wscnh',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5f7l8l/?pub=3wscnh',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5f7pvv/?pub=3wscnh',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5f7t4x/?pub=3wscnh',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5f811h/?pub=3wscnh',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5f811h/?pub=3wscnh',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5f84ml/?pub=3wscnh',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v5f87il/?pub=3wscnh',
+            'Season 1 Episode 9': 'https://rumble.com/embed/v5f8bhv/?pub=3wscnh',
+            'Season 1 Episode 10': 'https://rumble.com/embed/v5f8e78/?pub=3wscnh',
+            '': '',
+            'Season 2 Episode 1': 'https://rumble.com/embed/v5ferrl/?pub=3wscnh',
+            'Season 2 Episode 2': 'https://rumble.com/embed/v5feug5/?pub=3wscnh',
+            'Season 2 Episode 3': 'https://rumble.com/embed/v5ff085/?pub=3wscnh',
+            'Season 2 Episode 4': 'https://rumble.com/embed/v5ff3e4/?pub=3wscnh',
+            'Season 2 Episode 5': 'https://rumble.com/embed/v5ff745/?pub=3wscnh',
+            'Season 2 Episode 6': 'https://rumble.com/embed/v5ffad1/?pub=3wscnh',
+            'Season 2 Episode 7': 'https://rumble.com/embed/v5ffe2r/?pub=3wscnh',
+            'Season 2 Episode 8': 'https://rumble.com/embed/v5ffil9/?pub=3wscnh',
+            'Season 2 Episode 9': 'https://rumble.com/embed/v5ffn36/?pub=3wscnh',
+            'Season 2 Episode 10': 'https://rumble.com/embed/v5ffwsy/?pub=3wscnh',
+            '‎ ‎': '',
+            'SEASON 3': 'NOT AVAILABLE',
+            'SEASON 4': 'NOT AVAILABLE',
+            'SEASON 5': 'NOT AVAILABLE',
+            'SEASON 6': 'NOT AVAILABLE',
+        }
+    },
+
+'Invincible': {
+        title: 'Invincible',
+        type: 'show', // Specify it's a TV show
+        episodes: {
+            'Season 1 Episode 1': 'https://rumble.com/embed/v5ici51/?pub=3u4il9',
+            'Season 1 Episode 2': 'https://rumble.com/embed/v5ici5x/?pub=3u4il9',
+            'Season 1 Episode 3': 'https://rumble.com/embed/v5ici85/?pub=3u4il9',
+            'Season 1 Episode 4': 'https://rumble.com/embed/v5ici9w/?pub=3u4il9',
+            'Season 1 Episode 5': 'https://rumble.com/embed/v5icj7x/?pub=3u4il9',
+            'Season 1 Episode 6': 'https://rumble.com/embed/v5icj9g/?pub=3u4il9',
+            'Season 1 Episode 7': 'https://rumble.com/embed/v5icjal/?pub=3u4il9',
+            'Season 1 Episode 8': 'https://rumble.com/embed/v5icjcl/?pub=3u4il9',
+            '': '',
+            'Season 2 Episode 1': 'https://rumble.com/embed/v5icp9x/?pub=3u4il9',
+            'Season 2 Episode 2': 'https://rumble.com/embed/v5icpbe/?pub=3u4il9',
+            'Season 2 Episode 3': 'https://rumble.com/embed/v5icpe2/?pub=3u4il9',
+            'Season 2 Episode 4': 'https://rumble.com/embed/v5icptm/?pub=3u4il9',
+            'Season 2 Episode 5': 'https://rumble.com/embed/v5icpv9/?pub=3u4il9',
+            'Season 2 Episode 6': 'https://rumble.com/embed/v5icpwh/?pub=3u4il9',
+            'Season 2 Episode 7': 'https://rumble.com/embed/v5icpz1/?pub=3u4il9',
+            'Season 2 Episode 8': 'https://rumble.com/embed/v5icq19/?pub=3u4il9',
+        }
+    },
+};
+
+// Select elements
+const movieItems = document.querySelectorAll('.movie-item');
+const episodeFrame = document.getElementById('episodeFrame');
+const movieList = document.querySelector('.movie-list');
+const episodeContainer = document.querySelector('.episode-container');
+
+// Add event listeners to movie items
+movieItems.forEach(item => {
+    item.addEventListener('click', function() {
+        const movieKey = item.dataset.movie;
+        const movieData = movies[movieKey]; // Get movie data from movies object
+        
+        if (movieData && movieData.episodes && movieData.episodes['Main Movie']) {
+            const embedUrl = movieData.episodes['Main Movie']; // Get embed URL for Main Movie
+            episodeFrame.src = embedUrl; // Set iframe src to the movie's embed URL
+            movieList.style.display = 'none'; // Hide movie selection
+            episodeContainer.style.display = 'flex'; // Show episode container
+        } else {
+            console.error("Embed URL not found for Main Movie of:", movieKey);
+        }
+    });
+});
+
+// Back to menu functionality
+document.getElementById('backToMenu').addEventListener('click', function(e) {
+    e.preventDefault();
+    movieList.style.display = 'flex'; // Show movie list again
+    episodeContainer.style.display = 'none'; // Hide episode container
+    episodeFrame.src = ''; // Clear iframe src
+});
+    </script>
+<script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const searchWord = this.value.toLowerCase();
+        const movies = document.querySelectorAll('.movie-item');
+
+        movies.forEach(movie => {
+            const title = movie.querySelector('p').textContent.toLowerCase();
+            if (title.includes(searchWord)) {
+                movie.style.display = 'block';  // Show matching movie/show
+            } else {
+                movie.style.display = 'none';   // Hide non-matching movie/show
+            }
+        });
+    });
+</script>
+
+<script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    const searchWord = this.value.toLowerCase();
+    const movies = document.querySelectorAll('.movie');
+    let found = false; // Track if any movies are found
+
+    if (searchWord === "") {
+        // If the search input is cleared, show all movies and hide the no-results message
+        movies.forEach(movie => {
+            movie.style.display = 'block';
+        });
+        document.getElementById('no-results').style.display = 'none';
+    } else {
+        
+            }
+        });
+
+        // Show or hide the no-results message based on whether any movies were found
+        const noResultsMessage = document.getElementById('no-results');
+        noResultsMessage.style.display = found ? 'none' : 'block'; // Toggle no results message
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const movieList = document.querySelector(".movie-list");
+    
+        // Listen for the wheel event and scroll horizontally
+        movieList.addEventListener("wheel", (event) => {
+            event.preventDefault(); // Prevent vertical scrolling
+            movieList.scrollLeft += event.deltaY; // Use deltaY to scroll horizontally
+        });
+    });
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all movie lists
+    const movieLists = document.querySelectorAll(".movie-list");
+
+    // Function to apply infinite scroll logic to each list
+    movieLists.forEach(movieList => {
+        const items = Array.from(movieList.children);
+
+        // Clone items at the start and end to create an infinite loop
+        items.forEach(item => {
+            movieList.appendChild(item.cloneNode(true)); // Clone to the end
+            movieList.insertBefore(item.cloneNode(true), movieList.firstChild); // Clone to the beginning
+        });
+
+        // Calculate the middle scroll position based on item width
+        const itemWidth = items[0].offsetWidth + 20; // Item width + gap
+        const middlePosition = items.length * itemWidth;
+        movieList.scrollLeft = middlePosition;
+
+        // Listen for scroll event to loop seamlessly
+        movieList.addEventListener("scroll", () => {
+            if (movieList.scrollLeft <= 0) {
+                // If scrolled to the very start, reset to the middle
+                movieList.scrollLeft = middlePosition;
+            } else if (movieList.scrollLeft >= movieList.scrollWidth - movieList.clientWidth) {
+                // If scrolled to the very end, reset to the middle
+                movieList.scrollLeft = middlePosition;
+            }
+        });
+
+        // Translate vertical scroll to horizontal scroll
+        movieList.addEventListener("wheel", (event) => {
+            event.preventDefault(); // Prevent default vertical scrolling
+            movieList.scrollLeft += event.deltaY; // Scroll horizontally
+        });
+    });
+});
+        </script>
+</body>
+</html>
