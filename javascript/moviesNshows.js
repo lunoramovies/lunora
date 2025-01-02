@@ -20,7 +20,7 @@ const movies = {
         },
     'Deadpool2': {
                 title: 'Deadpool 2',
-                'Main Movie': 'https://rumble.com/embed/v5w2htz/?pub=3u4il9',
+                'Main Movie': 'https://rumble.com/embed/v631yiy/?pub=3u4il9',
 
         },
     'Deadpool3': {
