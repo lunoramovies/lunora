@@ -20,12 +20,30 @@
     <div id="buttons">
 <a href="https://lunoramovies.github.io/lunora/"><button>Start watching now!</button></a> <a href="https://github.com/lunoramovies/lunora"><button>GitHub repository</button></a>
     </div>
+    <div id="buttons2">
 <a href="https://discord.gg/MvngPkMMVh"><button>Discord server</button></a>
+
+    <button onclick="showChangelog()">Changelog</button>
+<div id="changelogModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Changelog</h2>
+        <div id="changelogContent"></div>
+    </div>
+</div>
+    </div>
  </center>
 </body>
 
 <style>
     #buttons {
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        flex-wrap: wrap;
+    }
+
+    #buttons2 {
         display: flex;
         justify-content: center;
         border-radius: 5px;
@@ -81,4 +99,62 @@
         max-width: 150px; 
         height: auto; 
     }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .modal-content {
+        background-color: #1a1a1a;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid ivory;
+        border-radius: 20px;
+        width: 80%;
+        max-width: 700px;
+        color: ivory;
+    }
+
+    .close {
+        color: ivory;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 </style>
+
+<script>
+    const modal = document.getElementById("changelogModal");
+    const closeBtn = document.getElementsByClassName("close")[0];
+    
+    async function showChangelog() {
+        modal.style.display = "block";
+        try {
+            const response = await fetch('https://api.github.com/repos/lunoramovies/lunora/releases');
+            const releases = await response.json();
+            
+            const changelogHtml = releases.map(release => `
+                <h3>${release.tag_name}</h3>
+                <p>${release.body.replace(/\r\n/g, '<br>')}</p>
+                <hr>
+            `).join('');
+            
+            document.getElementById('changelogContent').innerHTML = changelogHtml;
+        } catch (error) {
+            document.getElementById('changelogContent').innerHTML = 'Error loading changelog';
+        }
+    }
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+        if (event.target == modal) modal.style.display = "none";
+    }
+</script>
