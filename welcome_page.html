@@ -28,12 +28,17 @@
     #buttons {
         display: flex;
         justify-content: center;
+        border-radius: 5px;
+        flex-wrap: wrap;
     }
     
     body {
         background-color: black;
         color: ivory;
         font-family: Ubuntu;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
     button {
@@ -44,12 +49,31 @@
         font-family: Ubuntu;
         padding: 10px 20px;
         transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        border-radius: 20px;
     }
 
     button:hover {
         background-color: ivory;
-        border-color: #1a1a1a;
         color: #1a1a1a;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        h4 {
+            font-size: 14px;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
     }
 
     img {

@@ -420,15 +420,15 @@ const movies = {
             // Check if movieData contains episodes
             if (movieData && movieData.episodes) {
                 populateSeasonSelector(movieData.episodes);
-                episodeContainer.style.display = 'block'; // Show the episode container
+                episodeContainer.style.display = 'flex'; // Show the episode container
                 movieList.style.display = 'none'; // Hide the movie list
-                adjustViewerPosition(); // Adjust the position of the viewer
+                centerIframe(); // Center the iframe
             } else if (movieData && movieData['Main Movie']) {
                 // Handle case for movies with 'Main Movie' property
                 episodeFrame.src = movieData['Main Movie']; // Set the src attribute of the episodeFrame
-                episodeContainer.style.display = 'block'; // Show the episode container
+                episodeContainer.style.display = 'flex'; // Show the episode container
                 movieList.style.display = 'none'; // Hide the movie list
-                adjustViewerPosition(); // Adjust the position of the viewer
+                centerIframe(); // Center the iframe
                 clearEpisodeList(); // Clear the episode list and season selector
             }
         });
@@ -491,6 +491,21 @@ const movies = {
         const sidebarHeight = document.querySelector('.sidebar').offsetHeight;
         viewer.style.marginTop = `-${sidebarHeight / 1}px`; // Adjust the position a bit higher
     }
+
+    function centerIframe() {
+        const iframe = document.getElementById('episodeFrame');
+        const viewer = document.getElementById('viewer');
+        const sidebar = document.querySelector('.sidebar');
+        
+        const sidebarHeight = sidebar.offsetHeight;
+        const viewerHeight = viewer.offsetHeight;
+        const iframeHeight = iframe.offsetHeight;
+        
+        const topMargin = (viewerHeight - iframeHeight - sidebarHeight) / 2;
+        iframe.style.marginTop = `${topMargin}px`;
+    }
+
+    window.addEventListener('resize', centerIframe); // Re-center the iframe on window resize
 
     // Back to menu functionality
     document.getElementById('backToMenu').addEventListener('click', function(e) {

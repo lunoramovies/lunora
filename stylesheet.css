@@ -210,31 +210,78 @@
         }
 
         .episode-container {
-            display: flex;
-            justify-content: center; /* Center items horizontally */
-            align-items: flex-start;
-            flex-direction: row; /* Ensure the sidebar and iframe are aligned horizontally */
+            display: none; /* Hide by default */
+            flex-direction: row; /* Align elements horizontally */
+            align-items: center; /* Center elements vertically */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            position: fixed; /* Fix the position of the container */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            right: 0; /* Align to the right */
+            bottom: 0; /* Align to the bottom */
+            background-color: rgba(0, 0, 0, 0.8); /* Add a background color with transparency */
+            z-index: 1000; /* Ensure it is above other elements */
         }
 
         .sidebar {
-            width: 200px;
-            margin-right: 20px;
+            width: 300px; /* Adjust the width as needed */
+            height: 100%; /* Full height */
             background-color: #1a1a1a; /* Set background color */
             color: ivory; /* Set text color */
-            padding: 10px; /* Add padding */
+            padding: 20px; /* Add padding */
             border-radius: 8px; /* Add border radius */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         #viewer {
             flex: 1; /* Take up the remaining space */
             display: flex;
-            justify-content: center; /* Center the iframe */
+            justify-content: center; /* Center the iframe horizontally */
+            align-items: center; /* Center the iframe vertically */
+            height: 100%; /* Full height */
+            padding: 20px; /* Add padding to ensure it's not too close to the edges */
+            flex-direction: column; /* Stack iframe and button vertically */
         }
 
         #episodeFrame {
-            width: 600px; /* Adjust the width as needed */
-            height: 400px; /* Adjust the height as needed */
+            width: 80%; /* Adjust the width as needed */
+            height: 80%; /* Adjust the height as needed */
             border-radius: 8px; /* Optional: Add border radius */
+            max-height: calc(100% - 60px); /* Ensure it fits within the padding */
+            max-width: calc(100% - 40px); /* Ensure it fits within the padding */
+        }
+
+        @media (max-width: 1200px) {
+            #episodeFrame {
+                width: 100%; /* Full width on small screens */
+                height: 60%; /* Adjust height for small screens */
+                max-height: calc(100% - 80px); /* Ensure it fits within the padding */
+            }
+        }
+
+        @media (max-width: 600px) {
+            #episodeFrame {
+                width: 100%; /* Full width on small screens */
+                height: 50%; /* Adjust height for small screens */
+                max-height: calc(100% - 100px); /* Ensure it fits within the padding */
+            }
+        }
+
+        #backToMenu {
+            margin-top: 20px; /* Add some spacing above the button */
+            padding: 10px 20px; /* Add padding to the button */
+            background-color: #1a1a1a; /* Button background color */
+            color: ivory; /* Button text color */
+            border: none; /* Remove border */
+            border-radius: 8px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        #backToMenu:hover {
+            background-color: ivory; /* Change background color on hover */
+            color: #1a1a1a; /* Change text color on hover */
         }
 
         .sidebar select, .sidebar ul {
