@@ -212,7 +212,7 @@
         .episode-container {
             display: none; /* Hide by default */
             flex-direction: row; /* Align elements horizontally */
-            align-items: center; /* Center elements vertically */
+            align-items: stretch; /* Stretch elements to fill the container */
             width: 100%; /* Full width */
             height: 100%; /* Full height */
             position: fixed; /* Fix the position of the container */
@@ -261,10 +261,26 @@
         }
 
         @media (max-width: 600px) {
+            .episode-container {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            .sidebar {
+                width: 100%; /* Full width on small screens */
+                height: auto; /* Adjust height for small screens */
+                padding: 10px; /* Adjust padding for small screens */
+                border-radius: 0; /* Remove border radius */
+            }
+
+            #viewer {
+                padding: 10px; /* Adjust padding for small screens */
+            }
+
             #episodeFrame {
                 width: 100%; /* Full width on small screens */
-                height: 50%; /* Adjust height for small screens */
-                max-height: calc(100% - 100px); /* Ensure it fits within the padding */
+                height: 100%; /* Full height on small screens */
+                max-height: 100%; /* Ensure it fits within the screen */
+                border-radius: 0; /* Remove border radius for fullscreen */
             }
         }
 
