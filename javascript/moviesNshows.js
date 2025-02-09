@@ -2,77 +2,108 @@ const movies = {
     'TrumanShow': {
                 title: 'The Truman Show',
                 'Main Movie': 'https://rumble.com/embed/v59iui1/?pub=3u4il9',
-
         },
+
     'FightClub': {
                 title: 'Fight Club',
                 'Main Movie': 'https://rumble.com/embed/v59iuxp/?pub=3u4il9',
-
         },
+
     'Whiplash': {
                 title: 'Whiplash',
                 'Main Movie': 'https://rumble.com/embed/v59ixmq/?pub=3u4il9',
         },
+
     'Deadpool': {
                 title: 'Deadpool',
                 'Main Movie': 'https://rumble.com/embed/v59nkat/?pub=3u4il9',
-
         },
+
     'Deadpool2': {
                 title: 'Deadpool 2',
                 'Main Movie': 'https://rumble.com/embed/v631yiy/?pub=3u4il9',
-
         },
+
     'Deadpool3': {
                 title: 'Deadpool and Wolverine',
                 'Main Movie': 'https://rumble.com/embed/v5w2is5/?pub=3u4il9',
-
         },
+
     'Borat': {
                 title: 'Borat',
                 'Main Movie': 'https://rumble.com/embed/v59rvud/?pub=3u4il9',
-
         },
+
     'Borat2': {
                 title: 'Borat subsequent moviefilm',
                 'Main Movie': 'https://rumble.com/embed/v5f3fxh/?pub=3u4il9',
-
         },
+
     'Taken': {
                 title: 'Taken',
                 'Main Movie': 'https://rumble.com/embed/v5b2fc4/?pub=3u4il9',
-
         },
+
     'Taken2': {
                 title: 'Taken 2',
                 'Main Movie': 'https://rumble.com/embed/v5b2ixp/?pub=3u4il9',
-
         },
+
     'Taken3': {
                 title: 'Taken 3',
                 'Main Movie': 'https://rumble.com/embed/v5b2os4/?pub=3u4il9',
-
         },
+
     'Transformers': {
                 title: 'Transformers',
                 'Main Movie': 'https://rumble.com/embed/v5dd0fg/?pub=3u4il9',
-
         },
+
+    'Transformers2': {
+                title: 'Transformers: Revenge of the Fallen',
+                'Main Movie': 'https://rumble.com/embed/v5w2ig2/?pub=3u4il9',
+        },
+
     'TDK': {
                 title: 'The Dark Knight',
                 'Main Movie': 'https://rumble.com/embed/v5eof6l/?pub=3u4il9',
-
         },
+
     'TDKR': {
                 title: 'The Dark Knight Rises',
                 'Main Movie': 'https://rumble.com/embed/v5f3mtw/?pub=3u4il9',
-
         },
+
     'TheLorax': {
-
+                title: 'The Lorax',
                 'Main Movie': 'https://rumble.com/embed/v5erdoy/?pub=3u4il9',
-
         },
+
+    'Flow': {
+                title: 'Flow',
+                'Main Movie': 'https://rumble.com/embed/v6dozw1/?pub=3u4il9',
+        },
+         
+    'TheNeverEndingStory': {
+                title: 'The NeverEnding Story',
+                'Main Movie': 'https://rumble.com/embed/v608dl2/?pub=3u4il9',
+        },   
+
+    'HomeAlone': {
+                title: 'Home Alone',
+                'Main Movie': 'https://rumble.com/embed/v6016wz/?pub=3u4il9',
+        },
+
+    'HomeAlone2': {
+                title: 'Home Alone 2',
+                'Main Movie': 'https://rumble.com/embed/v6016t8/?pub=3u4il9',
+        },
+
+    'SuperheroMovie': {
+                title: 'Superhero Movie',
+                'Main Movie': 'https://rumble.com/embed/v607vxn/?pub=3u4il9',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
@@ -87,6 +118,7 @@ const movies = {
                 'Season 1 Episode 8': 'https://rumble.com/embed/v59lcrh/?pub=3u4il9',
             }
         },
+
     'DaBois': {
             title: 'The Boys',
             type: 'show', // Specify it's a TV show
@@ -128,20 +160,22 @@ const movies = {
                 'Season 4 Episode 8': 'https://rumble.com/embed/v59rgks/?pub=3u4il9',
             }
         },
+
     'GenV': {
             title: 'Gen V',
             type: 'show', // Specify it's a TV show
             episodes: {
-                'Season 1 Episode 1': 'https://rumble.com/embed/v59nb0a/?pub=3u4il9',
-                'Season 1 Episode 2': 'https://rumble.com/embed/v59o0a1/?pub=3u4il9',
-                'Season 1 Episode 3': 'https://rumble.com/embed/v59o0f1/?pub=3u4il9',
-                'Season 1 Episode 4': 'https://rumble.com/embed/v59o0gt/?pub=3u4il9',
-                'Season 1 Episode 5': 'https://rumble.com/embed/v59o0j1/?pub=3u4il9',
-                'Season 1 Episode 6': 'https://rumble.com/embed/v59o0kq/?pub=3u4il9',
-                'Season 1 Episode 7': 'https://rumble.com/embed/v59o0n7/?pub=3u4il9',
-                'Season 1 Episode 8': 'https://rumble.com/embed/v59o0qb/?pub=3u4il9',
+                'Episode 1': 'https://rumble.com/embed/v59nb0a/?pub=3u4il9',
+                'Episode 2': 'https://rumble.com/embed/v59o0a1/?pub=3u4il9',
+                'Episode 3': 'https://rumble.com/embed/v59o0f1/?pub=3u4il9',
+                'Episode 4': 'https://rumble.com/embed/v59o0gt/?pub=3u4il9',
+                'Episode 5': 'https://rumble.com/embed/v59o0j1/?pub=3u4il9',
+                'Episode 6': 'https://rumble.com/embed/v59o0kq/?pub=3u4il9',
+                'Episode 7': 'https://rumble.com/embed/v59o0n7/?pub=3u4il9',
+                'Episode 8': 'https://rumble.com/embed/v59o0qb/?pub=3u4il9',
             }
         },
+
     'Sharpe': {
             title: 'Sharpe',
             type: 'show', // Specify it's a TV show
@@ -166,6 +200,7 @@ const movies = {
                 'Season 1 Episode 18': 'https://rumble.com/embed/v59hb3h/?pub=3u4il9',
             }
         },
+
     'HazbinHotel': {
             title: 'Hazbin Hotel',
             type: 'show', // Specify it's a TV show
@@ -180,6 +215,7 @@ const movies = {
                 'Season 1 Episode 8': 'https://rumble.com/embed/v5clb3g/?pub=3u4il9',
             }
         },
+
     'TGT': {
             title: 'The Grand Tour',
             type: 'show', // Specify it's a TV show
@@ -237,6 +273,7 @@ const movies = {
                 'Season 6 Episode 1': 'https://rumble.com/embed/v5fbnh9/?pub=3u4il9',
             }
         },
+
     'TheFlash': {
             title: 'The Flash',
             type: 'show', // Specify it's a TV show
@@ -266,6 +303,7 @@ const movies = {
                 'Season 1 Episode 23': 'https://rumble.com/embed/v5ddzgt/?pub=3u4il9',
             }
         },
+
     'BreakingBad': {
             title: 'Breaking Bad',
             type: 'show', // Specify it's a TV show
@@ -338,6 +376,7 @@ const movies = {
                 'Season 5 Episode 16': 'https://rumble.com/embed/v5f7yjx/?pub=3u4il9',
             }
         },
+
     'BCS': {
             title: 'Better Call Saul',
             type: 'show', // Specify it's a TV show
@@ -394,7 +433,48 @@ const movies = {
                 'Season 2 Episode 8': 'https://rumble.com/embed/v5icq19/?pub=3u4il9',
             }
         },
-    };
+
+        'DexterNB': {
+            title: 'Dexter: New Blood',
+            type: 'show', // Specify it's a TV show
+            episodes: {
+                'Season 1 Episode 1': 'https://rumble.com/embed/v6g88zs/?pub=3u4il9',
+                'Season 1 Episode 2': 'https://rumble.com/embed/v6g8hzy/?pub=3u4il9',
+                'Season 1 Episode 3': 'https://rumble.com/embed/v6g8sb7/?pub=3u4il9',
+                'Season 1 Episode 4': 'https://rumble.com/embed/v6g91ya/?pub=3u4il9',
+                'Season 1 Episode 5': 'https://rumble.com/embed/v6g9djs/?pub=3u4il9',
+                'Season 1 Episode 6': 'https://rumble.com/embed/v6g9nes/?pub=3u4il9',
+                'Season 1 Episode 7': 'https://rumble.com/embed/v6g9ufp/?pub=3u4il9',
+                'Season 1 Episode 8': 'https://rumble.com/embed/v6ga3r4/?pub=3u4il9',
+                'Season 1 Episode 9': 'https://rumble.com/embed/v6gag7g/?pub=3u4il9',
+                'Season 1 Episode 10': 'https://rumble.com/embed/v6gasqp/?pub=3u4il9',
+            }
+        },
+
+        'SquidGame': {
+            title: 'Squid Game',
+            type: 'show', // Specify it's a TV show
+            episodes: {
+                'Season 1 Episode 1': 'https://rumble.com/embed/v69425p/?pub=3u4il9',
+                'Season 1 Episode 2': 'https://rumble.com/embed/v6944ey/?pub=3u4il9',
+                'Season 1 Episode 3': 'https://rumble.com/embed/v6949gm/?pub=3u4il9',
+                'Season 1 Episode 4': 'https://rumble.com/embed/v694bym/?pub=3u4il9',
+                'Season 1 Episode 5': 'https://rumble.com/embed/v694e7v/?pub=3u4il9',
+                'Season 1 Episode 6': 'https://rumble.com/embed/v694i04/?pub=3u4il9',
+                'Season 1 Episode 7': 'https://rumble.com/embed/v694krp/?pub=3u4il9',
+                'Season 1 Episode 8': 'https://rumble.com/embed/v69n0ty/?pub=3u4il9',
+                'Season 1 Episode 9': 'https://rumble.com/embed/v69n0xa/?pub=3u4il9',
+
+                'Season 2 Episode 1': 'https://rumble.com/embed/v6cjdds/?pub=3u4il9',
+                'Season 2 Episode 2': 'https://rumble.com/embed/v6cjdj7/?pub=3u4il9',
+                'Season 2 Episode 3': 'https://rumble.com/embed/v6cjdo7/?pub=3u4il9',
+                'Season 2 Episode 4': 'https://rumble.com/embed/v6cjdt7/?pub=3u4il9',
+                'Season 2 Episode 5': 'https://rumble.com/embed/v6cje14/?pub=3u4il9',
+                'Season 2 Episode 6': 'https://rumble.com/embed/v6cje4v/?pub=3u4il9',
+                'Season 2 Episode 7': 'https://rumble.com/embed/v6gl8aa/?pub=3u4il9',
+            }
+    }
+}
     
     // Select elements
     const movieItems = document.querySelectorAll('.movie-item');
@@ -516,3 +596,36 @@ const movies = {
         movieTitle.textContent = ''; // Clear the movie's name in the sidebar
         clearEpisodeList(); // Clear the episode list and season selector
     });
+
+    const downloadOptions = {
+        'TheNeverEndingStory': [
+            { url: 'https://buzzheavier.com/kd25xrr0odit', text: 'Original' },
+            { url: 'https://buzzheavier.com/ma1z1657zc3t', text: '1080p version' }
+        ],
+
+        'SquidGame': [
+            { url: 'https://buzzheavier.com/60mhkfgfzupx', text: 'Season 1' },
+            { url: '', text: 'Season 2 unavailable' }
+        ]
+    };
+
+    function showDownloadOptions(movieKey) {
+        const options = downloadOptions[movieKey];
+        if (!options) return;
+
+        const downloadOptionsContainer = document.getElementById('downloadOptions');
+        downloadOptionsContainer.innerHTML = '';
+
+        options.forEach(option => {
+            const button = document.createElement('button');
+            button.textContent = option.text;
+            button.onclick = () => window.open(option.url, '_blank');
+            downloadOptionsContainer.appendChild(button);
+        });
+
+        document.getElementById('downloadModal').style.display = 'block';
+    }
+
+    function closeDownloadOptions() {
+        document.getElementById('downloadModal').style.display = 'none';
+    }
