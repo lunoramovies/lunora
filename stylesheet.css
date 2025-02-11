@@ -459,6 +459,24 @@ button[data-modal] {
 
 /* ...existing code... */
 
+#nextEpisode, #prevEpisode {
+    background-color: #1a1a1a; /* Button background color */
+    color: ivory; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Add border radius */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    margin: 5px; /* Add space between buttons */
+}
+
+#nextEpisode:hover, #prevEpisode:hover {
+    background-color: ivory; /* Change background color on hover */
+    color: #1a1a1a; /* Change text color on hover */
+}
+
+/* ...existing code... */
+
 @media (max-width: 600px) {
     .movie-list {
         overflow-x: scroll; /* Enable horizontal scrolling */

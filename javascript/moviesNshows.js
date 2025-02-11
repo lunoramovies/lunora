@@ -550,6 +550,7 @@ const movies = {
                 li.textContent = episode;
                 li.addEventListener('click', function() {
                     episodeFrame.src = episodes[episode];
+                    updateEpisodeButtons(episodes, episode);
                 });
                 episodeList.appendChild(li);
             }
@@ -560,6 +561,33 @@ const movies = {
         if (firstEpisode) {
             firstEpisode.click();
         }
+    }
+
+    function updateEpisodeButtons(episodes, currentEpisode) {
+        const episodeKeys = Object.keys(episodes);
+        const currentIndex = episodeKeys.indexOf(currentEpisode);
+    
+        const prevButton = document.getElementById('prevEpisode');
+        const nextButton = document.getElementById('nextEpisode');
+    
+        prevButton.disabled = currentIndex <= 0;
+        nextButton.disabled = currentIndex >= episodeKeys.length - 1;
+    
+        prevButton.onclick = () => {
+            if (currentIndex > 0) {
+                const prevEpisode = episodeKeys[currentIndex - 1];
+                episodeFrame.src = episodes[prevEpisode];
+                updateEpisodeButtons(episodes, prevEpisode);
+            }
+        };
+    
+        nextButton.onclick = () => {
+            if (currentIndex < episodeKeys.length - 1) {
+                const nextEpisode = episodeKeys[currentIndex + 1];
+                episodeFrame.src = episodes[nextEpisode];
+                updateEpisodeButtons(episodes, nextEpisode);
+            }
+        };
     }
     
     function clearEpisodeList() {
