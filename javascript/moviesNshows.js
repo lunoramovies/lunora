@@ -583,6 +583,11 @@ const movies = {
         
         const topMargin = (viewerHeight - iframeHeight - sidebarHeight) / 2;
         iframe.style.marginTop = `${topMargin}px`;
+
+        // Adjust for mobile view
+        if (window.innerWidth <= 600) {
+            iframe.style.marginTop = '0';
+        }
     }
 
     window.addEventListener('resize', centerIframe); // Re-center the iframe on window resize
