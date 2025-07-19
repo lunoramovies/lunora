@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-950 text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lunora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="icon" href="https://i.ibb.co/f15zJkV/Umovies.png"/>
+  </head>
+
+  <body class="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+
+    <!-- Header -->
+    <header class="w-full flex items-center justify-between px-4 py-3 absolute top-0 left-0 z-50">
+      <button class="text-white focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="w-full max-w-4xl text-center mt-20 sm:mt-32 px-2">
+      <img src="https://i.ibb.co/f15zJkV/Umovies.png" alt="Lunora Logo" class="w-32 h-32 mx-auto mb-4" />
+      <h1 class="text-5xl font-bold mb-4 gradient-text">Lunora</h1>
+      <p class="text-lg text-gray-300 mb-10 subtitle">
+        The future of film discovery. Fast. Curated. Beautiful.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="./watch.html" class="btn-primary text-lg px-6 py-3">🍿 Start Watching Movies!</a>
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+        <a href="https://discord.gg/MvngPkMMVh" class="btn-secondary text-lg px-6 py-3">💬 Join the Discord!</a>
+      </div>
+    </section>
+
+    <!-- Changelog -->
+    <section class="mt-24 w-full max-w-6xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Recent Changes</h2>
+      <div id="changelogContent" class="flex overflow-x-auto gap-6 px-4 py-4 scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-gray-800">
+        <!-- JS will inject cards here -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="mt-24 w-full max-w-4xl text-center px-4 py-12 bg-zinc-900 rounded-lg shadow-lg border border-zinc-800">
+      <h2 class="text-3xl font-bold mb-4 text-purple-400">About Lunora</h2>
+      <p class="text-gray-300 mb-6">
+        Lunora was born from a simple goal: <strong>make movie piracy easy</strong> — no torrents, no ads, just vibes.
+      </p>
+      <p class="text-gray-400 mb-4">
+        It all started when a friend with a game piracy server needed help with a movie site. That project became <em>uMovies</em>,
+        and over time evolved into <strong>Lunora</strong> — a sleeker, faster, more beautiful way to watch movies and shows, curated and crafted with love.
+      </p>
+      <p class="text-gray-400 mb-4">
+        Lunora stands out with <strong>zero ads</strong>, smooth performance, and the ability to <strong>request content</strong>.
+        We’re not just another mirror — we’re a sanctuary for film lovers and night scrollers alike.
+      </p>
+      <p class="text-gray-400 mb-6">
+        The current team includes <strong>Caseepotato</strong> (lead designer + content goblin), <strong>Saperan</strong>,
+        and another lovely uploader named <strong>yag821</strong>.
+        Special shoutout to <a href="https://saperan.github.io/Virowatch/" target="_blank" class="text-purple-400 hover:underline">Virowatch</a> — they helped inspire a lot of what Lunora became.
+      </p>
+      <p class="text-sm text-gray-600 italic">
+        P.S. We’re on TikTok too <a href="https://TikTok.com/@lunoramovies" target="_blank" class="text-purple-400 hover:underline">(@lunoramovies)</a> —
+        follow for updates, chaos, and occasional memes.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-32 text-gray-600 text-sm">
+      © 2025 Lunora. We totally have real copyright.
+    </footer>
+
+    <!-- Sidebar Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+      <!-- Backdrop -->
+      <div onclick="toggleMenu()" class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Slide-out panel -->
+      <div id="menuPanel"
+        class="relative z-50 w-64 h-full bg-zinc-900 p-6 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <h2 class="text-xl font-bold mb-6">Menu</h2>
+        <ul class="space-y-4">
+          <li><a href="./watch.html" class="hover:text-purple-400 transition">• Watch Movies</a></li>
+          <li><a href="https://github.com/lunoramovies/lunora" target="_blank" class="hover:text-purple-400 transition">• GitHub Repository</a></li>
+          <li><a href="https://discord.gg/MvngPkMMVh" target="_blank" class="hover:text-purple-400 transition">• Discord</a></li>
+          <li><a href="#about" onclick="goToAbout()" class="hover:text-purple-400 transition">• About</a></li>
+          <li><a href="https://www.tiktok.com/@lunoramovies" target="_blank" class="hover:text-purple-400 transition">• TikTok</a></li>
+        </ul>
+        <button onclick="toggleMenu()" class="mt-8 text-sm text-gray-400 hover:text-white">Close</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./javascript/changelog.js"></script>
+    <script src="./javascript/content.js"></script>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const panel = document.getElementById('menuPanel');
+
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            panel.classList.remove('-translate-x-full');
+            panel.classList.add('translate-x-0');
+          });
+        } else {
+          panel.classList.add('-translate-x-full');
+          panel.classList.remove('translate-x-0');
+          setTimeout(() => {
+            menu.classList.add('hidden');
+          }, 300);
+        }
+      }
+
+      function goToAbout() {
+        toggleMenu();
+        setTimeout(() => {
+          const aboutSection = document.getElementById('about');
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 300);
+      }
+    </script>
+  </body>
+</html>

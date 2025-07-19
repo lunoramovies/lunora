@@ -1,0 +1,63 @@
+.gradient-text {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #d1d5db;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border border-purple-600 hover:bg-purple-800 rounded-lg font-medium transition;
+}
+
+.feature-card {
+  @apply bg-gray-900/40 p-6 rounded-2xl border border-gray-800;
+}
+
+.feature-card h2 {
+  @apply text-xl font-semibold mb-2;
+}
+
+.feature-card p {
+  @apply text-gray-400 text-sm;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #7c3aed;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #1f2937;
+}
+#episodeList button {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap; /* Keeps text on one line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Optional: Adds ... if too long */
+}
+
+/* Optional glow effect for hover */
+button:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px rgba(168, 85, 247, 0.4);
+}
+
+/* Smooth iframe loading */
+iframe {
+  transition: opacity 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
