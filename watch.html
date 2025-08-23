@@ -81,7 +81,6 @@
     </button>
   </div>
 </div>
-
       <!-- Full Catalog Drawer -->
       <div id="drawerOverlay" class="fixed inset-0 bg-black/70 z-50 hidden flex items-start justify-center pt-12">
         <div class="bg-zinc-900 p-6 rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
@@ -163,6 +162,9 @@
       <div id="searchBox" class="bg-zinc-900 p-4 rounded-xl w-full max-w-xl mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col items-center gap-4">
         <input id="searchInputOverlay" type="text" placeholder="Search movies or shows..." class="w-full bg-zinc-800 text-white border border-zinc-700 rounded px-4 py-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
         <div id="searchResults" class="w-full flex flex-col gap-2 max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-zinc-800"></div>
+        <div id="discordRequestMsg" class="w-full text-center text-xs text-gray-400 mt-2 opacity-80 hidden">
+          Can't find what you're looking for? <a href="https://discord.gg/your-discord-link" target="_blank" class="text-purple-400 hover:underline">Request in the Discord!</a>
+        </div>
       </div>
     </div>
 
@@ -173,6 +175,7 @@
       const searchBox = document.getElementById('searchBox');
       const searchInputOverlay = document.getElementById('searchInputOverlay');
       const searchResults = document.getElementById('searchResults');
+      const discordRequestMsg = document.getElementById('discordRequestMsg');
 
       function openSearch() {
         searchOverlay.classList.remove('hidden');
@@ -204,11 +207,15 @@
       searchInputOverlay.addEventListener('input', () => {
         const term = searchInputOverlay.value.toLowerCase();
         searchResults.innerHTML = '';
-
+        // Show Discord message only if user has typed something
+        if (term.length > 0) {
+          discordRequestMsg.classList.remove('hidden');
+        } else {
+          discordRequestMsg.classList.add('hidden');
+        }
         for (const [key, data] of Object.entries(movies)) {
           const title = data.title.toLowerCase();
           if (!title.includes(term)) continue;
-
           const btn = document.createElement('button');
           btn.className = 'flex items-center gap-4 p-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition border border-zinc-700 w-full text-left';
           btn.innerHTML = `
@@ -223,7 +230,6 @@
             }
             closeSearch();
           };
-
           searchResults.appendChild(btn);
         }
       });
