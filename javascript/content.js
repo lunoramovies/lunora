@@ -146,6 +146,34 @@ const movies = {
                 'Main Movie': 'https://rumble.com/embed/v607vxn/?pub=3u4il9',
         },
 
+        'Superman': {
+                title: 'Superman',
+                poster: "https://www.kakuchopurei.com/wp-content/uploads/2024/12/Superman-Poster-1232x1536.jpeg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6vrjdy/?pub=4mcxpc',
+        },
+
+        'TheIncredibles': {
+                title: 'The Incredibles',
+                poster: "https://picfiles.alphacoders.com/346/346533.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6vri7i/?pub=4mcxpc',
+        },
+
+        'TheIncredibles2': {
+                title: 'The Incredibles 2',
+                poster: "https://image.tmdb.org/t/p/original/9lFKBtaVIhP7E2Pk0IY1CwTKTMZ.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6vri1m/?pub=4mcxpc',
+        },
+
+        'KPopDH': {
+                title: 'K-Pop Demon Hunters',
+                poster: "https://image.tmdb.org/t/p/original/jfS5KEfiwsS35ieZvdUdJKkwLlZ.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6vrjga/?pub=4mcxpc',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
@@ -339,7 +367,7 @@ const movies = {
     'TheFlash': {
             title: 'The Flash',
             type: 'show', // Specify it's a TV show
-            poster: "https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+            poster: "https://image.tmdb.org/t/p/original/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg",
             download1: '',
             episodes: {
                 'Season 1 Episode 1': 'https://rumble.com/embed/v5ddjo5/?pub=3u4il9',
@@ -559,6 +587,125 @@ const movies = {
                 'Season 3 Episode 6': 'https://rumble.com/embed/v6txmou/?pub=4mcxpc',
                 'Season 3 Episode 7': 'https://rumble.com/embed/v6txmpm/?pub=4mcxpc',
                 'Season 3 Episode 8': 'https://rumble.com/embed/v6txmqi/?pub=4mcxpc',
+            }
+        },
+
+        'Dexter': {
+            title: 'Dexter',
+            type: 'show', // Specify it's a TV show
+            poster: "https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/291380/3986298/apitboav0__47133.1625675847.jpg?c=2",
+            download1: '',
+            download2: '',
+            download3: '',
+            download4: '',
+            download5: '',
+            download6: '',
+            download7: '',
+            download8: '',
+            episodes: {
+                'Season 1 Episode 1': 'https://rumble.com/embed/v6ut7d8/?pub=4mjqt0',
+                'Season 1 Episode 2': 'https://rumble.com/embed/v6ut7ds/?pub=4mjqt0',
+                'Season 1 Episode 3': 'https://rumble.com/embed/v6ut7ec/?pub=4mjqt0',
+                'Season 1 Episode 4': 'https://rumble.com/embed/v6ut7f0/?pub=4mjqt0',
+                'Season 1 Episode 5': 'https://rumble.com/embed/v6ut7fm/?pub=4mjqt0',
+                'Season 1 Episode 6': 'https://rumble.com/embed/v6ut7fs/?pub=4mjqt0',
+                'Season 1 Episode 7': 'https://rumble.com/embed/v6ut7gk/?pub=4mjqt0',
+                'Season 1 Episode 8': 'https://rumble.com/embed/v6ut7gw/?pub=4mjqt0',
+                'Season 1 Episode 9': 'https://rumble.com/embed/v6ut7hm/?pub=4mjqt0',
+                'Season 1 Episode 10': 'https://rumble.com/embed/v6ut7ie/?pub=4mjqt0',
+                'Season 1 Episode 11': 'https://rumble.com/embed/v6ut7is/?pub=4mjqt0',
+                'Season 1 Episode 12': 'https://rumble.com/embed/v6ut7ji/?pub=4mjqt0',
+
+                'Season 2 Episode 1': 'https://rumble.com/embed/v6uu33u/?pub=4mjqt0',
+                'Season 2 Episode 2': 'https://rumble.com/embed/v6uu344/?pub=4mjqt0',
+                'Season 2 Episode 3': 'https://rumble.com/embed/v6uu38c/?pub=4mjqt0',
+                'Season 2 Episode 4': 'https://rumble.com/embed/v6uu38w/?pub=4mjqt0',
+                'Season 2 Episode 5': 'https://rumble.com/embed/v6uu390/?pub=4mjqt0',
+                'Season 2 Episode 6': 'https://rumble.com/embed/v6uu39g/?pub=4mjqt0',
+                'Season 2 Episode 7': 'https://rumble.com/embed/v6uu3a2/?pub=4mjqt0',
+                'Season 2 Episode 8': 'https://rumble.com/embed/v6uu3ae/?pub=4mjqt0',
+                'Season 2 Episode 9': 'https://rumble.com/embed/v6uu3b0/?pub=4mjqt0',
+                'Season 2 Episode 10': 'https://rumble.com/embed/v6uu3cy/?pub=4mjqt0',
+                'Season 2 Episode 11': 'https://rumble.com/embed/v6uu3j0/?pub=4mjqt0',
+                'Season 2 Episode 12': 'https://rumble.com/embed/v6uu3jc/?pub=4mjqt0',
+
+                'Season 3 Episode 1': 'https://rumble.com/embed/v6uu7co/?pub=4mjqt0',
+                'Season 3 Episode 2': 'https://rumble.com/embed/v6uu7cu/?pub=4mjqt0',
+                'Season 3 Episode 3': 'https://rumble.com/embed/v6uu7dg/?pub=4mjqt0',
+                'Season 3 Episode 4': 'https://rumble.com/embed/v6uu7dy/?pub=4mjqt0',
+                'Season 3 Episode 5': 'https://rumble.com/embed/v6uu7em/?pub=4mjqt0',
+                'Season 3 Episode 6': 'https://rumble.com/embed/v6uu7fe/?pub=4mjqt0',
+                'Season 3 Episode 7': 'https://rumble.com/embed/v6uu7fq/?pub=4mjqt0',
+                'Season 3 Episode 8': 'https://rumble.com/embed/v6uu7ge/?pub=4mjqt0',
+                'Season 3 Episode 9': 'https://rumble.com/embed/v6uu7gk/?pub=4mjqt0',
+                'Season 3 Episode 10': 'https://rumble.com/embed/v6uu7h4/?pub=4mjqt0',
+                'Season 3 Episode 11': 'https://rumble.com/embed/v6uu7hk/?pub=4mjqt0',
+                'Season 3 Episode 12': 'https://rumble.com/embed/v6uu7i4/?pub=4mjqt0',
+
+                'Season 4 Episode 1': 'https://rumble.com/embed/v6uu8gm/?pub=4mjqt0',
+                'Season 4 Episode 2': 'https://rumble.com/embed/v6uu8h4/?pub=4mjqt0',
+                'Season 4 Episode 3': 'https://rumble.com/embed/v6uu8hk/?pub=4mjqt0',
+                'Season 4 Episode 4': 'https://rumble.com/embed/v6uu8hu/?pub=4mjqt0',
+                'Season 4 Episode 5': 'https://rumble.com/embed/v6uu8i6/?pub=4mjqt0',
+                'Season 4 Episode 6': 'https://rumble.com/embed/v6uu8ii/?pub=4mjqt0',
+                'Season 4 Episode 7': 'https://rumble.com/embed/v6uu8j6/?pub=4mjqt0',
+                'Season 4 Episode 8': 'https://rumble.com/embed/v6uu8ju/?pub=4mjqt0',
+                'Season 4 Episode 9': 'https://rumble.com/embed/v6uu8ka/?pub=4mjqt0',
+                'Season 4 Episode 10': 'https://rumble.com/embed/v6uu8ks/?pub=4mjqt0',
+                'Season 4 Episode 11': 'https://rumble.com/embed/v6uu8l6/?pub=4mjqt0',
+                'Season 4 Episode 12': 'https://rumble.com/embed/v6uu8lk/?pub=4mjqt0',
+
+                'Season 5 Episode 1': 'https://rumble.com/embed/v6uu99w/?pub=4mjqt0',
+                'Season 5 Episode 2': 'https://rumble.com/embed/v6uu9a8/?pub=4mjqt0',
+                'Season 5 Episode 3': 'https://rumble.com/embed/v6uu9b4/?pub=4mjqt0',
+                'Season 5 Episode 4': 'https://rumble.com/embed/v6uu9bq/?pub=4mjqt0',
+                'Season 5 Episode 5': 'https://rumble.com/embed/v6uu9c4/?pub=4mjqt0',
+                'Season 5 Episode 6': 'https://rumble.com/embed/v6uu9d2/?pub=4mjqt0',
+                'Season 5 Episode 7': 'https://rumble.com/embed/v6uu9dc/?pub=4mjqt0',
+                'Season 5 Episode 8': 'https://rumble.com/embed/v6uu9du/?pub=4mjqt0',
+                'Season 5 Episode 9': 'https://rumble.com/embed/v6uu9f0/?pub=4mjqt0',
+                'Season 5 Episode 10': 'https://rumble.com/embed/v6uu9fe/?pub=4mjqt0',
+                'Season 5 Episode 11': 'https://rumble.com/embed/v6uu9fq/?pub=4mjqt0',
+                'Season 5 Episode 12': 'https://rumble.com/embed/v6uu9g8/?pub=4mjqt0',
+
+                'Season 6 Episode 1': 'https://rumble.com/embed/v6uua9i/?pub=4mjqt0',
+                'Season 6 Episode 2': 'https://rumble.com/embed/v6uuaai/?pub=4mjqt0',
+                'Season 6 Episode 3': 'https://rumble.com/embed/v6uuaay/?pub=4mjqt0',
+                'Season 6 Episode 4': 'https://rumble.com/embed/v6uuaby/?pub=4mjqt0',
+                'Season 6 Episode 5': 'https://rumble.com/embed/v6uuac6/?pub=4mjqt0',
+                'Season 6 Episode 6': 'https://rumble.com/embed/v6uuaco/?pub=4mjqt0',
+                'Season 6 Episode 7': 'https://rumble.com/embed/v6uuad2/?pub=4mjqt0',
+                'Season 6 Episode 8': 'https://rumble.com/embed/v6uuaee/?pub=4mjqt0',
+                'Season 6 Episode 9': 'https://rumble.com/embed/v6uuaf8/?pub=4mjqt0',
+                'Season 6 Episode 10': 'https://rumble.com/embed/v6uuafm/?pub=4mjqt0',
+                'Season 6 Episode 11': 'https://rumble.com/embed/v6uuag8/?pub=4mjqt0',
+                'Season 6 Episode 12': 'https://rumble.com/embed/v6uuags/?pub=4mjqt0',
+
+                'Season 7 Episode 1': 'https://rumble.com/embed/v6uub68/?pub=4mjqt0',
+                'Season 7 Episode 2': 'https://rumble.com/embed/v6uub6q/?pub=4mjqt0',
+                'Season 7 Episode 3': 'https://rumble.com/embed/v6uub7c/?pub=4mjqt',
+                'Season 7 Episode 4': 'https://rumble.com/embed/v6uub82/?pub=4mjqt0',
+                'Season 7 Episode 5': 'https://rumble.com/embed/v6uub8u/?pub=4mjqt0',
+                'Season 7 Episode 6': 'https://rumble.com/embed/v6uub98/?pub=4mjqt0',
+                'Season 7 Episode 7': 'https://rumble.com/embed/v6uuba2/?pub=4mjqt0',
+                'Season 7 Episode 8': 'https://rumble.com/embed/v6uubaq/?pub=4mjqt0',
+                'Season 7 Episode 9': 'https://rumble.com/embed/v6uubbc/?pub=4mjqt0',
+                'Season 7 Episode 10': 'https://rumble.com/embed/v6uubbm/?pub=4mjqt0',
+                'Season 7 Episode 11': 'https://rumble.com/embed/v6uubc0/?pub=4mjqt0',
+                'Season 7 Episode 12': 'https://rumble.com/embed/v6uubci/?pub=4mjqt0',
+
+                'Season 8 Episode 1': 'https://rumble.com/embed/v6uucey/?pub=4mjqt0',
+                'Season 8 Episode 2': 'https://rumble.com/embed/v6uucfs/?pub=4mjqt0',
+                'Season 8 Episode 3': 'https://rumble.com/embed/v6uucgg/?pub=4mjqt0',
+                'Season 8 Episode 4': 'https://rumble.com/embed/v6uuchi/?pub=4mjqt0',
+                'Season 8 Episode 5': 'https://rumble.com/embed/v6uucj2/?pub=4mjqt0',
+                'Season 8 Episode 6': 'https://rumble.com/embed/v6uucjg/?pub=4mjqt0',
+                'Season 8 Episode 7': 'https://rumble.com/embed/v6uuck4/?pub=4mjqt0',
+                'Season 8 Episode 8': 'https://rumble.com/embed/v6uucki/?pub=4mjqt0',
+                'Season 8 Episode 9': 'https://rumble.com/embed/v6uucl8/?pub=4mjqt0',
+                'Season 8 Episode 10': 'https://rumble.com/embed/v6uucm2/?pub=4mjqt0',
+                'Season 8 Episode 11': 'https://rumble.com/embed/v6uucm2/?pub=4mjqt0',
+                'Season 8 Episode 12': 'https://rumble.com/embed/v6uucn2/?pub=4mjqt0',
             }
         },
 
@@ -792,6 +939,7 @@ document.getElementById("prevShows").onclick = () => {
 
 // ==================== PLAYER FUNCTIONS ====================
 function playMovie(title, url) {
+  if (typeof window.closeSearch === 'function') window.closeSearch();
   movieTitle.textContent = title;
   movieFrame.src = url;
   episodeList.innerHTML = '';
@@ -827,6 +975,7 @@ function updateDownloadSeasonButton(showData, selectedSeason) {
 }
 
 function loadEpisodes(title, episodes) {
+  if (typeof window.closeSearch === 'function') window.closeSearch();
   movieTitle.textContent = title;
   episodeControls.classList.remove("hidden");
 
