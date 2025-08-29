@@ -174,6 +174,27 @@ const movies = {
                 'Main Movie': 'https://rumble.com/embed/v6vrjga/?pub=4mcxpc',
         },
 
+        'TPS': {
+                title: 'The Phoenician Scheme',
+                poster: "https://image.tmdb.org/t/p/original/xZ0Zc3HK8MlliErsAsbJwjtudUA.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6w21vm/?pub=4mcxpc',
+        },
+
+        'F1': {
+                title: 'F1: The Movie',
+                poster: "https://s.movieinsider.com/images/p/865541_m1741914996.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6w22mo/?pub=4mcxpc',
+        },
+
+        'Unfriended': {
+                title: 'Unfriended',
+                poster: "https://image.tmdb.org/t/p/original/8byPxREr3BqBNyyij5WHVSOVtYk.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6vvhwk/?pub=3wscnh',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
@@ -729,7 +750,7 @@ const movies = {
         },
 
         'DexterOS': {
-            title: 'Dexter: Orinal Sin',
+            title: 'Dexter: Original Sin',
             type: 'show', // Specify it's a TV show
             poster: "https://lh4.googleusercontent.com/proxy/e5ceMMx3nyRTGtBS1caeK1q7KCR00TDhD3gBGa0HTvVTQCGpcn895nPnpEv-eo3uWjCvZPpD9dLDrsn6JWAouPBsak4L4EnUHMgr4cl7vu4qlqI",
             download1: '',
