@@ -195,6 +195,69 @@ const movies = {
                 'Main Movie': 'https://rumble.com/embed/v6vvhwk/?pub=3wscnh',
         },
 
+        'HP1': {
+                title: 'Harry Potter and the Sorcerer\'s Stone',
+                poster: "https://image.tmdb.org/t/p/original/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6wh83k/?pub=4mcxpc',
+        },
+
+        'HP2': {
+                title: 'Harry Potter and the Chamber of Secrets',
+                poster: "https://image.tmdb.org/t/p/original/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whab8/?pub=4mcxpc',
+        },
+
+        'HP3': {
+                title: 'Harry Potter and the Prisoner of Azkaban',
+                poster: "https://image.tmdb.org/t/p/original/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whbc0/?pub=4mcxpc',
+        },
+
+        'HP4': {
+                title: 'Harry Potter and the Goblet of Fire',
+                poster: "https://image.tmdb.org/t/p/original/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whd7k/?pub=4mcxpc',
+        },
+
+        'HP5': {
+                title: 'Harry Potter and the Order of the Phoenix',
+                poster: "https://image.tmdb.org/t/p/original/g6n8G0xPnBVUIKKK41sNmbZB5h4.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whf1e/?pub=4mcxpc',
+        },
+
+        'HP6': {
+                title: 'Harry Potter and the Half-Blood Prince',
+                poster: "https://image.tmdb.org/t/p/original/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whgxk/?pub=4mcxpc',
+        },
+
+        'HP7': {
+                title: 'Harry Potter and the Deathly Hallows: Part 1',
+                poster: "https://image.tmdb.org/t/p/original/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whkdm/?pub=4mcxpc',
+        },
+
+        'HP8': {
+                title: 'Harry Potter and the Deathly Hallows: Part 2',
+                poster: "https://image.tmdb.org/t/p/original/vTbIpnlO0igcGspBsFqBQqaSYzw.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6whkdy/?pub=4mcxpc',
+        },
+
+        'InglouriousBasterds': {
+                title: 'Inglourious Basterds',
+                poster: "https://image.tmdb.org/t/p/original/dqu7nUtKTLdpM7DaJvD4zcSXhn1.jpg",
+                download: 'https://mystuff.bublup.com/api/v1/media-access/download/001-i-4e0cdcc6-9725-4d1a-8185-01f74b18c3dd__v__33_1_1',
+                'Main Movie': 'https://rumble.com/embed/v6whlas/?pub=4mcxpc',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
