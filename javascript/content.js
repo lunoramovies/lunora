@@ -258,6 +258,20 @@ const movies = {
                 'Main Movie': 'https://rumble.com/embed/v6whlas/?pub=4mcxpc',
         },
 
+        'BoS': {
+                title: 'Blizzard of Souls',
+                poster: "https://pics.filmaffinity.com/dveselu_putenis_blizzard_of_souls-625867689-large.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6x1l3u/?pub=4n0aq2',
+        },
+
+        'AtlantisTLE': {
+                title: 'Atlantis: The Lost Empire',
+                poster: "https://image.tmdb.org/t/p/original/8fUEFPUTF7kBMuKPiSQHxPvd8EZ.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v6y939a/?pub=4mcxpc',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
