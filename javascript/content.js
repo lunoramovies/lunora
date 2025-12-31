@@ -272,6 +272,13 @@ const movies = {
                 'Main Movie': 'https://rumble.com/embed/v6y939a/?pub=4mcxpc',
         },
 
+    'L&S': {
+                title: 'Lilo and Stitch(2025)',
+                poster: "https://image.tmdb.org/t/p/original/c32TsWLES7kL1uy6fF03V67AIYX.jpg",
+                download: '',
+                'Main Movie': 'https://rumble.com/embed/v71ikwu/?pub=4mcxpc',
+        },
+
     'Peacemaker': {
             title: 'Peacemaker',
             type: 'show', // Specify it's a TV show
@@ -1192,3 +1199,4 @@ function filterButtons(containerId, term) {
     btn.style.display = visible ? "block" : "none";
   });
 }
+
