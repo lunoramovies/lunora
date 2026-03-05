@@ -877,6 +877,85 @@ const movies = {
                 'Season 2 Episode 6': 'https://rumble.com/embed/v6cje4v/?pub=3u4il9',
                 'Season 2 Episode 7': 'https://rumble.com/embed/v6gl8aa/?pub=3u4il9',
             }
+    },
+
+    'SolarOpposites': {
+            title: 'Solar Opposites',
+            type: 'show', // Specify it's a TV show
+            poster: "https://image.tmdb.org/t/p/original/m431Q9FgkilJGxBnXSot4Gy87b2.jpg",
+            download1: '',
+            download2: '',
+            episodes: {
+                'Season 1 Episode 1': 'https://rumble.com/embed/v74hvns/?pub=4mcxpc',
+                'Season 1 Episode 2': 'https://rumble.com/embed/v74hvo8/?pub=4mcxpc',
+                'Season 1 Episode 3': 'https://rumble.com/embed/v74hvom/?pub=4mcxpc',
+                'Season 1 Episode 4': 'https://rumble.com/embed/v74hvp4/?pub=4mcxpc',
+                'Season 1 Episode 5': 'https://rumble.com/embed/v74hvpw/?pub=4mcxpc',
+                'Season 1 Episode 6': 'https://rumble.com/embed/v74hvq6/?pub=4mcxpc',
+                'Season 1 Episode 7': 'https://rumble.com/embed/v74hvqk/?pub=4mcxpc',
+                'Season 1 Episode 8': 'https://rumble.com/embed/v74hvqw/?pub=4mcxpc',
+
+                'Season 2 Episode 1': 'https://rumble.com/embed/v74hvz4/?pub=4mcxpc',
+                'Season 2 Episode 2': 'https://rumble.com/embed/v74hvzg/?pub=4mcxpc',
+                'Season 2 Episode 3': 'https://rumble.com/embed/v74hw04/?pub=4mcxpc',
+                'Season 2 Episode 4': 'https://rumble.com/embed/v74hw0q/?pub=4mcxpc',
+                'Season 2 Episode 5': 'https://rumble.com/embed/v74hw88/?pub=4mcxpc',
+                'Season 2 Episode 6': 'https://rumble.com/embed/v74hw8u/?pub=4mcxpc',
+                'Season 2 Episode 7': 'https://rumble.com/embed/v74hw96/?pub=4mcxpc',
+                'Season 2 Episode 8': 'https://rumble.com/embed/v74hw9i/?pub=4mcxpc',
+
+                'Season 3 Episode 1': 'https://rumble.com/embed/v74hwo8/?pub=4mcxpc',
+                'Season 3 Episode 2': 'https://rumble.com/embed/v74hwog/?pub=4mcxpc',
+                'Season 3 Episode 3': 'https://rumble.com/embed/v74hwoq/?pub=4mcxpc',
+                'Season 3 Episode 4': 'https://rumble.com/embed/v74hwp8/?pub=4mcxpc',
+                'Season 3 Episode 5': 'https://rumble.com/embed/v74hwva/?pub=4mcxpc',
+                'Season 3 Episode 6': 'https://rumble.com/embed/v74hwvw/?pub=4mcxpc',
+                'Season 3 Episode 7': 'https://rumble.com/embed/v74hwwc/?pub=4mcxpc',
+                'Season 3 Episode 8': 'https://rumble.com/embed/v74hwww/?pub=4mcxpc',
+                'Season 3 Episode 9': 'https://rumble.com/embed/v74hx2i/?pub=4mcxpc',
+                'Season 3 Episode 10': 'https://rumble.com/embed/v74hx3c/?pub=4mcxpc',
+                'Season 3 Episode 11': 'https://rumble.com/embed/v74hx42/?pub=4mcxpc',
+
+                'Season 4 Episode 1': 'https://rumble.com/embed/v74hxtq/?pub=4mcxpc',
+                'Season 4 Episode 2': 'https://rumble.com/embed/v74hxu0/?pub=4mcxpc',
+                'Season 4 Episode 3': 'https://rumble.com/embed/v74hxue/?pub=4mcxpc',
+                'Season 4 Episode 4': 'https://rumble.com/embed/v74hxuu/?pub=4mcxpc',
+                'Season 4 Episode 5': 'https://rumble.com/embed/v74hy3e/?pub=4mcxpc',
+                'Season 4 Episode 6': 'https://rumble.com/embed/v74hy3q/?pub=4mcxpc',
+                'Season 4 Episode 7': 'https://rumble.com/embed/v74hy4k/?pub=4mcxpc',
+                'Season 4 Episode 8': 'https://rumble.com/embed/v74hy5c/?pub=4mcxpc',
+                'Season 4 Episode 9': 'https://rumble.com/embed/v74hz18/?pub=4mcxpc',
+                'Season 4 Episode 10': 'https://rumble.com/embed/v74hz1m/?pub=4mcxpc',
+                'Season 4 Episode 11': 'https://rumble.com/embed/v74hz48/?pub=4mcxpc',
+
+                'Season 5 Episode 1': 'https://rumble.com/embed/v74hzh6/?pub=4mcxpc',
+                'Season 5 Episode 2': 'https://rumble.com/embed/v74hzhi/?pub=4mcxpc',
+                'Season 5 Episode 3': 'https://rumble.com/embed/v74hzia/?pub=4mcxpc',
+                'Season 5 Episode 4': 'https://rumble.com/embed/v74hzik/?pub=4mcxpc',
+                'Season 5 Episode 5': 'https://rumble.com/embed/v74hzss/?pub=4mcxpc',
+                'Season 5 Episode 6': 'https://rumble.com/embed/v74hztc/?pub=4mcxpc',
+                'Season 5 Episode 7': 'https://rumble.com/embed/v74hztw/?pub=4mcxpc',
+                'Season 5 Episode 8': 'https://rumble.com/embed/v74hzu6/?pub=4mcxpc',
+                'Season 5 Episode 9': 'https://rumble.com/embed/v74hzzq/?pub=4mcxpc',
+                'Season 5 Episode 10': 'https://rumble.com/embed/v74i00g/?pub=4mcxpc',
+                'Season 5 Episode 11': 'https://rumble.com/embed/v74i00q/?pub=4mcxpc',
+
+                'Season 6 Episode 1': 'https://rumble.com/embed/v74i0e6/?pub=4mcxpc',
+                'Season 6 Episode 2': 'https://rumble.com/embed/v74i0ei/?pub=4mcxpc',
+                'Season 6 Episode 3': 'https://rumble.com/embed/v74i0f4/?pub=4mcxpc',
+                'Season 6 Episode 4': 'https://rumble.com/embed/v74i0fq/?pub=4mcxpc',
+                'Season 6 Episode 5': 'https://rumble.com/embed/v74i3bs/?pub=4mcxpc',
+                'Season 6 Episode 6': 'https://rumble.com/embed/v74i0s4/?pub=4mcxpc',
+                'Season 6 Episode 7': 'https://rumble.com/embed/v74i0ss/?pub=4mcxpc',
+                'Season 6 Episode 8': 'https://rumble.com/embed/v74i0t4/?pub=4mcxpc',
+                'Season 6 Episode 9': 'https://rumble.com/embed/v74i0tk/?pub=4mcxpc',
+                'Season 6 Episode 10': 'https://rumble.com/embed/v74i0ua/?pub=4mcxpc',
+
+                'Specials Holiday': 'https://rumble.com/embed/v74i1hm/?pub=4mcxpc',
+                'Specials Halloween': 'https://rumble.com/embed/v74i1hy/?pub=4mcxpc',
+                'Specials Halloween Part 2': 'https://rumble.com/embed/v74i1i2/?pub=4mcxpc',
+                'Specials Valentines': 'https://rumble.com/embed/v74i1i6/?pub=4mcxpc',
+            }
     }
 }
 
@@ -1084,13 +1163,22 @@ function loadEpisodes(title, episodes) {
   movieTitle.textContent = title;
   episodeControls.classList.remove("hidden");
 
-  const seasons = [...new Set(Object.keys(episodes).map(ep => ep.split(" ")[1]))];
+  const seasons = [...new Set(Object.keys(episodes).map(ep => {
+    if (ep.startsWith("Specials")) {
+      return "Specials";
+    }
+    return ep.split(" ")[1];
+  }))].sort((a, b) => {
+    if (a === "Specials") return 1;
+    if (b === "Specials") return -1;
+    return parseInt(a) - parseInt(b);
+  });
 
   seasonSelector.innerHTML = '';
   seasons.forEach(season => {
     const option = document.createElement('option');
     option.value = season;
-    option.textContent = `Season ${season}`;
+    option.textContent = season === "Specials" ? "Specials" : `Season ${season}`;
     seasonSelector.appendChild(option);
   });
 
@@ -1112,9 +1200,15 @@ function loadEpisodes(title, episodes) {
 
 function renderEpisodesForSeason(episodes, selectedSeason, title) {
   episodeList.innerHTML = '';
-  currentEpisodes = Object.entries(episodes).filter(([epTitle]) =>
-    epTitle.includes(`Season ${selectedSeason}`)
-  );
+  if (selectedSeason === "Specials") {
+    currentEpisodes = Object.entries(episodes).filter(([epTitle]) =>
+      epTitle.startsWith("Specials")
+    );
+  } else {
+    currentEpisodes = Object.entries(episodes).filter(([epTitle]) =>
+      epTitle.includes(`Season ${selectedSeason}`)
+    );
+  }
 
   // Find the current show data
 const currentShowData = Object.values(movies).find(
@@ -1128,9 +1222,9 @@ if (currentShowData) {
 
   currentEpisodes.forEach(([epTitle, epUrl]) => {
     const epBtn = document.createElement('button');
-    // Extract episode number for label
+    // Extract episode number for label, or special name
     let match = epTitle.match(/Episode (\d+)/i);
-    let label = match ? `Episode ${match[1]}` : epTitle;
+    let label = match ? `Episode ${match[1]}` : epTitle.replace(/^Specials\s+/, "");
     epBtn.textContent = label;
     epBtn.className = 'bg-zinc-900 hover:bg-zinc-800 text-white px-2.5 py-1.5 rounded-md border border-zinc-700 text-sm transition whitespace-nowrap';
     epBtn.onclick = () => {
